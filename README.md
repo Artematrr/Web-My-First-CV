@@ -1,2 +1,2 @@
-# Not "My_First_Resume" at all
+# Not "My_First_Resume" in substance
 Trying to reach...
