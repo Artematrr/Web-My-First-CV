@@ -10,14 +10,20 @@
 
   <body>
     <header>
-      <h1>Пока что это тест, но <em>скоро</em> будет норм. (⊙﹏⊙)</h1>
+      <h1>Пока что это тест, но <em>скоро</em> будет норм, честно (⊙﹏⊙)</h1>
     </header>
+
     <div class="Content">
       <h2>Структура сайта</h2>
       <ol>
         <li><a href="#My_City">Про Кувандык</a></li>
-        <li><a href="#Coocking_List">Кулинарные списки</a></li>
-        <li></li>
+        <li>
+          <a href="#Coocking_List">Кулинарные списки</a>
+          <ul>
+            <li>Словать еды</li>
+            <li>Что какие ингридиенты требует</li>
+          </ul>
+        </li>
       </ol>
     </div>
 
@@ -34,40 +40,36 @@
               >Кувандыке</a
             >. Скромный город страны! Нормально к нему отношусь.
           </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non modi
+            pariatur voluptatum. Debitis consectetur deleniti a tempora
+            inventore assumenda sapiente quidem repellendus, iste veritatis quam
+            quos vitae aperiam eveniet maxime.
+          </p>
         </div>
         <hr />
 
         <div id="Coocking_List">
           <h3><q>Я люблю готовить</q></h3>
           <dl>
-            <dt>Гаспачо</dt>
-            <dd>лёгкий холодный суп из перетёртых в пюре свежих овощей</dd>
-            <dt>Борщ</dt>
-            <dd>
-              разновидность супа на основе свёклы, которая придаёт борщу
-              характерный красный цвет
-            </dd>
+            <ul>
+              <li>
+                <dt><span class="Food_Topic">Омлет:</span></dt>
+                <dd>
+                  яичница, к которой добавляется молоко или другая жидкость,
+                  иногда даже немного какой-либо муки.
+                </dd>
+                <span class="lit">Требует:</span>
+                <span class="Ingredients">
+                  <ul>
+                    <li>Яйца</li>
+                    <li>Колбаска</li>
+                    <li>Молоко</li>
+                  </ul>
+                </span>
+              </li>
+            </ul>
           </dl>
-          <ul>
-            <li>
-              Омлет
-              <ul>
-                <li>Молоко</li>
-                <li>Яйца</li>
-              </ul>
-            </li>
-            <li>
-              Блинчики
-              <ul>
-                <li>Молоко</li>
-                <li>Яйца</li>
-                <li>Мука</li>
-                <li>Сахар</li>
-                <li>Соль</li>
-                <li>Разрыхлитель</li>
-              </ul>
-            </li>
-          </ul>
           <hr />
         </div>
       </main>
@@ -79,7 +81,7 @@
           alt="Здесь была картинка Кувандыка"
           width="500"
         />
-        <figcaption>Красота Кувандыка</figcaption>
+        <figcaption>Родина-мать</figcaption>
       </aside>
     </div>
 
@@ -92,7 +94,7 @@
           <a target="_blank" href="https://github.com/Artematrr">Гитхаб</a>
         </li>
       </ul>
-      <p>Вот и все мои <abbr title="Социальные сети">сеточки</abbr></p>
+      <p>Вот и все мои <abbr title="Социальные сети">сеточки</abbr>.</p>
     </footer>
   </body>
 </html>
