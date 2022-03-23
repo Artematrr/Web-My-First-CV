@@ -10,17 +10,17 @@
 
   <!-- TODO Сайт по центру -->
   <body>
-    <header class="header_title">
+    <header class="header_title shad">
       <h1>Это <em>шапочка</em> (⊙﹏⊙)</h1>
     </header>
     <div class="container">
       <div class="info">
         <img
           src="/Images/my_avatar.jpg"
-          class="avatar"
+          class="avatar card shad"
           alt="Здесь была печенька"
         />
-        <div class="info-text">
+        <div class="info_text">
           <h1>Artematrr</h1>
           <p>
             Лютый <em>(в прошлом)</em> фотошопер, которому стало доставлять
@@ -33,7 +33,7 @@
         </div>
       </div>
 
-      <div class="contents">
+      <div class="contents card shad">
         <h2>Структура сайта</h2>
         <ol>
           <li><a href="#my_city">Про Кувандык</a></li>
@@ -47,23 +47,34 @@
         </ol>
       </div>
 
-      <div id="my_city">
-        <h3>Про мой родной город</h3>
-        <p>
-          Я родился и вырос в
-          <a
-            target="_blank"
-            title="Это не много, но и не мало"
-            href="https://ru.wikipedia.org/wiki/%D0%9A%D1%83%D0%B2%D0%B0%D0%BD%D0%B4%D1%8B%D0%BA"
-            >Кувандыке</a
-          >. Скромный город страны! Нормально к нему отношусь.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Non modi
-          pariatur voluptatum. Debitis consectetur deleniti a tempora inventore
-          assumenda sapiente quidem repellendus, iste veritatis quam quos vitae
-          aperiam eveniet maxime.
-        </p>
+      <div class="flex_city" id="my_city">
+        <main>
+          <h3>Про мой родной город</h3>
+          <p>
+            Я родился и вырос в
+            <a
+              target="_blank"
+              title="Это не много, но и не мало"
+              href="https://ru.wikipedia.org/wiki/%D0%9A%D1%83%D0%B2%D0%B0%D0%BD%D0%B4%D1%8B%D0%BA"
+              >Кувандыке</a
+            >. Скромный город страны! Нормально к нему отношусь.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non modi
+            pariatur voluptatum. Debitis consectetur deleniti a tempora
+            inventore assumenda sapiente quidem repellendus, iste veritatis quam
+            quos vitae aperiam eveniet maxime.
+          </p>
+        </main>
+        <aside>
+          <img
+            class="shad card image"
+            src="Images/Kuvandyk_1.jpg"
+            title="Кува"
+            alt="Здесь была картинка Кувандыка"
+          />
+          <figcaption>Родина-мать</figcaption>
+        </aside>
         <table class="table">
           <tr bgcolor="'red">
             <th>Город</th>
@@ -80,15 +91,6 @@
             <td>-</td>
           </tr>
         </table>
-
-        <img
-          class="image"
-          src="Images/Kuvandyk_1.jpg"
-          title="Кува"
-          alt="Здесь была картинка Кувандыка"
-        />
-        <figcaption>Родина-мать</figcaption>
-        <br />
       </div>
 
       <hr />
@@ -118,47 +120,50 @@
       </div>
       <div class="more_links">
         <h3>Разные мною созданные странички</h3>
-        <ul>
-          <li>
+        <ul class="list_group">
+          <li class="list_group_item">
             <a target="_blank" href="Pages/index_2.html">Чужой сайт</a>
           </li>
-          <li>
+          <li class="list_group_item">
             <a href="/Pages/index_3.html" target="_blank">Чужое резюме</a>
           </li>
-          <li></li>
+          <li class="list_group_item"></li>
         </ul>
       </div>
 
-      
       <div class="contact">
         <h2>Связаться со мной</h2>
         <form action="/">
           <div class="row">
-            <div class="form-group">
+            <div class="form_group">
               <label for="name">Ваше имя:</label>
               <input type="text" id="name" placeholder="Введите ваше имя..." />
             </div>
 
-            <div class="form-group">
+            <div class="form_group">
               <label for="email">Ваш email:</label>
               <input type="email" id="email" placeholder="Введите email..." />
             </div>
           </div>
 
-          <div class="form-group">
+          <div class="form_group">
             <label for="text">Вашe сообщение:</label>
-            <textarea id="text"  placeholder="Начните печатать..." rows="2" cols="15"></textarea>
+            <textarea
+              id="text"
+              placeholder="Начните печатать...
+            "
+              rows="2"
+              cols="15"
+            ></textarea>
           </div>
 
           <input class="btn" type="submit" value="Связаться!" />
         </form>
       </div>
 
-      <div class="position">
-        <div class="box"></div>
-      </div>
-    </div>
-
+      <!-- <div class="position">
+        <div class="aside">AA</div>
+      </div> -->
     </div>
 
     <footer>

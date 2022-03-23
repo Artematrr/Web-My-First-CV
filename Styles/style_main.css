@@ -2,9 +2,6 @@
 
 body {
   font: normal 16px 'Raleway', sans-serif;
-  /* font-size: 16px;
-  font-weight: normal;
-  font-family: 'Raleway', sans-serif; */
   color: black;
   margin: 0px;
 }
@@ -31,86 +28,39 @@ a:visited {
   color: rgb(44, 44, 44);
 }
 
-.avatar {
-  width: 300px;
-  border-radius: 20px;
+.shad {
   box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25);
-  margin-top: 10px;
+}
+
+.card {
+  border-radius: 20px;
+}
+
+.avatar {
+  width: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .info {
   display: flex;
   margin-bottom: 20px;
 }
-
 .info p {
   color: #86898f;
   margin: 0;
   font-style: italic;
   word-spacing: 3px;
 }
-
-@media (max-width: 700px) {
-  .info {
-    text-align: center;
-    display: block;
-  }
-
-  .container .contents {
-    width: 90%;
-  }
-
-  .container .info-text {
-    margin: 10px 0px;
-  }
-}
-
-.info-text {
+.info_text {
   margin-left: 30px;
 }
-
-.info-text h4 {
+.info_text h4 {
   margin-bottom: 10px;
 }
 
 .container {
-  max-width: 1280px;
-  margin: auto;
-}
-
-.image {
-  width: 300px;
-  border-radius: 20px;
-  box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25);
-}
-
-figcaption {
-  font-style: italic;
-  text-align: left;
-  margin-top: 20px;
-  margin-left: 20px;
-}
-
-.contents {
-  background-color: rgb(202, 223, 202);
-  box-sizing: border-box;
-  padding: 0px 10px;
-
-  margin: 10px 10px 20px 10px;
-  width: 50%;
-  border-radius: 20px;
-  float: left;
-}
-
-.contents a {
-  color: brown;
-}
-
-.table {
-  background-color: aliceblue;
-  text-align: center;
-  width: 90%;
-
+  max-width: 1000px;
   margin: auto;
 }
 
@@ -121,13 +71,63 @@ figcaption {
   font-size: 20px;
 }
 
+.image {
+  width: 300px;
+}
+figcaption {
+  font-style: italic;
+  text-align: left;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+/* TODO С картинкой текст не получился */
+/* .flex_city main {
+  display: flex;
+} */
+/* .flex_city main,
+.flex_city aside {
+  width: 50%;
+} */
+
+/* ! Красивые списки */
+.list_group_item {
+  padding: 10px 10px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  width: 400px;
+  margin-bottom: 5px;
+}
+
+.table {
+  background-color: aliceblue;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+}
+
+.contents {
+  background-color: rgb(233, 243, 233);
+  box-sizing: border-box;
+  padding: 0px 10px;
+  margin: 10px 10px 20px 10px;
+  width: 400px;
+  float: left;
+}
+
+.contents a {
+  color: rgb(110, 47, 47);
+}
+
 hr {
   border: none;
   border-top: 5px double;
   width: 90%;
   text-align: center;
 }
-/* Если будут словечки в разделениях
+
+/* ! Если будут словечки в разделениях
 /* hr:after {
   background-color: #fff;
   padding: 0px 20px;
@@ -135,18 +135,17 @@ hr {
   top: -13px;
 } */
 
+/* ! Зона связей */
 .contact h2 {
   text-align: center;
 }
-
-.form-group label {
+.form_group label {
   display: block;
   font-size: 14px;
   color: #86898f;
 }
-
-.form-group input,
-.form-group textarea {
+.form_group input,
+.form_group textarea {
   width: 100%;
   box-sizing: border-box;
   border: none;
@@ -157,54 +156,58 @@ hr {
   outline: none;
   font-family: inherit;
 }
+.form_group textarea {
+  min-height: 60px;
+  min-width: 500px;
+  max-width: 100%;
+}
 
 .row {
   display: flex;
   margin-bottom: 20px;
 }
-
-.row > .form-group {
+.row > .form_group {
   width: 50%;
   margin-right: 20px;
 }
-
-.row > .form-group:last-child {
+.row > .form_group:last-child {
   margin-right: 0;
 }
 
 .btn {
   background: #111;
   padding: 15px 20px;
+  margin: 10px auto;
+  display: grid;
   color: #fff;
   border: none;
   font-family: inherit;
   cursor: pointer;
 }
-
 .btn:hover {
   opacity: 0.9;
 }
 
-/* Position */
-
-/* .position {
-  position: relative;
-  border: 4px solid black;
-  margin-top: 40px;
-  padding: 20px;
-  height: 300px;
-}
-
-.box {
+/* ! Закреплённые вещи */
+/* 
+.aside {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 50px;
+  height: 97%;
+  background: rgba(84, 250, 106, 0.363);
+  text-align: center;
+  border-radius: 5px;
+} */
+/* 
+header {
   position: fixed;
   top: 0;
   left: 0px;
-  width: 100%;
-  height: 50px;
-  background:lightcoral;
 } */
 
-/* Food */
+/* ! Списки еды */
 .food_name {
   font-size: larger;
   font-weight: bold;
@@ -228,4 +231,15 @@ footer {
   padding: auto 10px;
   text-align: center;
   color: rgb(236, 236, 236);
+}
+
+@media (max-width: 700px) {
+  .info {
+    text-align: center;
+    display: block;
+  }
+
+  .container .info_text {
+    margin: 10px 0px;
+  }
 }
