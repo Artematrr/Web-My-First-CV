@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 
 body {
-  font-size: 16px;
+  font: normal 16px 'Raleway', sans-serif;
+  /* font-size: 16px;
+  font-weight: normal;
+  font-family: 'Raleway', sans-serif; */
   color: black;
   margin: 0px;
-  font-weight: normal;
-  font-family: 'Raleway', sans-serif;
 }
 
 div {
@@ -204,17 +205,17 @@ hr {
 } */
 
 /* Food */
-.ingredients {
-  font-style: italic;
+.food_name {
+  font-size: larger;
+  font-weight: bold;
 }
 
-.lit {
+.food_need {
   color: brown;
 }
 
-.food_topic {
-  font-size: larger;
-  font-weight: bold;
+.food_ingredients {
+  font-style: italic;
 }
 
 header,
