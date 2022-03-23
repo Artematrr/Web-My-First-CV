@@ -11,6 +11,30 @@ div {
   overflow: hidden;
 }
 
+/* ! Верхушка и низушка */
+header,
+footer {
+  background-color: darkslategray;
+  padding: 10px;
+}
+.header_title {
+  color: #fff;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 20px;
+}
+.container {
+  padding: 0px 10px;
+  box-sizing: border-box;
+  max-width: 1000px;
+  margin: auto;
+}
+footer {
+  padding: auto 10px;
+  text-align: center;
+  color: rgb(236, 236, 236);
+}
+
 a {
   color: brown;
   text-decoration: none;
@@ -59,54 +83,25 @@ a:visited {
   margin-bottom: 10px;
 }
 
-.container {
-  max-width: 1000px;
-  margin: auto;
+/* ! Картиночки */
+.flex_city > p > .image {
+  float: right;
+  clear: right;
+  margin: 10px 0px 10px 10px;
 }
-
-.header_title {
-  color: #fff;
-  text-align: center;
-  font-weight: bolder;
-  font-size: 20px;
-}
-
 .image {
   width: 300px;
 }
-figcaption {
+/* figcaption {
   font-style: italic;
   text-align: left;
+  float: right;
   margin-top: 10px;
   margin-left: 20px;
   margin-bottom: 10px;
-}
-
-/* TODO С картинкой текст не получился */
-/* .flex_city main {
-  display: flex;
-} */
-/* .flex_city main,
-.flex_city aside {
-  width: 50%;
 } */
 
-/* ! Красивые списки */
-.list_group_item {
-  padding: 10px 10px;
-  background-color: aliceblue;
-  border-radius: 10px;
-  width: 400px;
-  margin-bottom: 5px;
-}
-
-.table {
-  background-color: aliceblue;
-  text-align: center;
-  width: 90%;
-  margin: auto;
-}
-
+/* ! Оглавление */
 .contents {
   background-color: rgb(233, 243, 233);
   box-sizing: border-box;
@@ -115,25 +110,55 @@ figcaption {
   width: 400px;
   float: left;
 }
-
 .contents a {
   color: rgb(110, 47, 47);
 }
 
+/* ! Красивые списки */
+.list_group {
+  border-style: solid;
+  border-radius: 10px;
+  border-color: rgb(167, 164, 164);
+  width: 150px;
+}
+.list_group_item {
+  padding: 5px 0px;
+  border: 0;
+
+  border-bottom: rgb(122, 122, 122) 2px;
+  border-style: solid;
+}
+.list_group_item:last-child {
+  border: 0;
+}
+
+/* ! Табличка */
+.table {
+  background-color: aliceblue;
+  border: solid 2px;
+  text-align: center;
+  width: 300px;
+  margin: auto;
+}
+
+.flex_city > p > .table {
+  width: 400px;
+  float: left;
+}
+
+/* ! Разделения */
 hr {
   border: none;
   border-top: 5px double;
   width: 90%;
-  text-align: center;
+  /* text-align: center; */
 }
-
-/* ! Если будут словечки в разделениях
 /* hr:after {
   background-color: #fff;
   padding: 0px 20px;
   position: relative;
   top: -13px;
-} */
+} 
 
 /* ! Зона связей */
 .contact h2 {
@@ -161,7 +186,6 @@ hr {
   min-width: 500px;
   max-width: 100%;
 }
-
 .row {
   display: flex;
   margin-bottom: 20px;
@@ -173,7 +197,6 @@ hr {
 .row > .form_group:last-child {
   margin-right: 0;
 }
-
 .btn {
   background: #111;
   padding: 15px 20px;
@@ -221,24 +244,15 @@ header {
   font-style: italic;
 }
 
-header,
-footer {
-  background-color: darkslategray;
-  padding: 10px;
-}
-
-footer {
-  padding: auto 10px;
-  text-align: center;
-  color: rgb(236, 236, 236);
-}
-
+/* ! Для узких экранов*/
 @media (max-width: 700px) {
+  .avatar {
+    margin-bottom: 0px;
+  }
   .info {
     text-align: center;
     display: block;
   }
-
   .container .info_text {
     margin: 10px 0px;
   }
