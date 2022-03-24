@@ -8,16 +8,15 @@
     <title>Artematrr: резюме</title>
   </head>
 
-  <!-- TODO Сайт по центру -->
   <body>
-    <header class="header_title shad">
+    <header class="header_title shadc bg_dark">
       <h1>Это <em>шапочка</em> (⊙﹏⊙)</h1>
     </header>
     <div class="container">
       <div class="info">
         <img
           src="/Images/my_avatar.jpg"
-          class="avatar card shad"
+          class="avatar card shadr"
           alt="Здесь была печенька"
         />
         <div class="info_text">
@@ -33,7 +32,7 @@
         </div>
       </div>
       <hr>
-      <div class="contents card shad">
+      <div class="contents bg_light card shadr">
         <h2>Структура сайта</h2>
         <ol>
           <li><a href="#my_city">Про Кувандык</a></li>
@@ -51,9 +50,9 @@
         <h3>Про мой родной город</h3>
         <p>
           <img
-            class="shad card image"
+            class="shadl card image"
             src="Images/Kuvandyk_1.jpg"
-            title="Кува"
+            title="Родина-мать"
             alt="Здесь была картинка Кувандыка"
           />
           Я родился и вырос в
@@ -68,14 +67,14 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Non modi
           pariatur voluptatum. Debitis consectetur deleniti a tempora inventore
           .
-          <table class="table">
-            <tr bgcolor="'red">
+          <table class="table bg_light">
+            <tr class="bg_dark">
               <th>Город</th>
               <th>Плюсы</th>
               <th>Минусы</th>
             </tr>
             <tr>
-              <td bgcolor="sapiente" rowspan="3">Кувандык</td>
+              <td class="bg_dark" rowspan="3">Кувандык</td>
               <td>+</td>
               <td>-</td>
             </tr>
@@ -86,7 +85,6 @@
           </table>
         </div>
         </p>
-        <!-- <figcaption>Родина-мать</figcaption> -->
       <hr />
 
       <div id="food_list">
@@ -102,9 +100,9 @@
               <span class="food_need">Требует:</span>
               <span class="food_ingredients">
                 <ul>
-                  <li>Яйца</li>
+                  <li>Яички</li>
                   <li>Колбаска</li>
-                  <li>Молоко</li>
+                  <li>Молочко</li>
                 </ul>
               </span>
             </li>
@@ -112,19 +110,21 @@
         </dl>
         <hr />
       </div>
+
       <div class="more_links">
         <h3>Разные мною созданные странички</h3>
-        <ul class="shad list_group">
+        <ul class="shadr list_group">
           <li class="list_group_item">
             <a target="_blank" href="Pages/index_2.html">Чужой сайт</a>
           </li>
           <li class="list_group_item">
             <a href="/Pages/index_3.html" target="_blank">Чужое резюме</a>
           </li>
-          <li class="list_group_item">Трилистник</li>
+          <li class="list_group_item"><a href="/" target="_blank">Трилистник</a></li>
         </ul>
       </div>
       <hr>
+
       <div class="contact">
         <h2>Связаться со мной</h2>
         <form action="/">
@@ -133,13 +133,11 @@
               <label for="name">Ваше имя:</label>
               <input type="text" id="name" placeholder="Введите ваше имя..." />
             </div>
-
             <div class="form_group">
               <label for="email">Ваш email:</label>
               <input type="email" id="email" placeholder="Введите email..." />
             </div>
           </div>
-
           <div class="form_group">
             <label for="text">Вашe сообщение:</label>
             <textarea
@@ -149,7 +147,6 @@
               cols="15"
             ></textarea>
           </div>
-
           <input class="btn" type="submit" value="Связаться!" />
         </form>
       </div>
@@ -159,7 +156,7 @@
       </div> -->
     </div>
 
-    <footer>
+    <footer class="bg_dark">
       <p>Вот и всё, ребятки.</p>
     </footer>
   </body>
