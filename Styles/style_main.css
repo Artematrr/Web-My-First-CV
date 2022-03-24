@@ -11,10 +11,24 @@ div {
   overflow: hidden;
 }
 
+/* Цветовая схема */
+.bg_light {
+  color: #000;
+  background-color: aliceblue;
+}
+.bg_dark {
+  color: #fff;
+  background-color: #004444;
+}
+.bg_accent {
+  color: #fff;
+  background-color: #ff8e32;
+}
+
 /* ! Верхушка и низушка */
+
 header,
 footer {
-  background-color: darkslategray;
   padding: 10px;
 }
 .header_title {
@@ -35,37 +49,37 @@ footer {
   color: rgb(236, 236, 236);
 }
 
+/* ! Ссылки */
 a {
-  color: brown;
+  color: black;
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }
-
 a:active {
   font-weight: bold;
 }
-
 a:visited {
-  color: rgb(44, 44, 44);
+  color: rgb(80, 80, 80);
 }
 
-.shad {
-  box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25);
+/* ! Тени относительно вертикали */
+.shadr {
+  box-shadow: 10px 5px 14px rgba(0, 0, 0, 0.25);
+}
+.shadl {
+  box-shadow: -10px 5px 14px rgba(0, 0, 0, 0.25);
+}
+.shadc {
+  box-shadow: 0px 10px 14px rgba(0, 0, 0, 0.25);
 }
 
 .card {
   border-radius: 20px;
 }
 
-.avatar {
-  width: 200px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
+/* ! Верхняя информация */
 .info {
   display: flex;
   margin-bottom: 20px;
@@ -100,10 +114,14 @@ a:visited {
   margin-left: 20px;
   margin-bottom: 10px;
 } */
+.avatar {
+  width: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
 /* ! Оглавление */
 .contents {
-  background-color: rgb(233, 243, 233);
   box-sizing: border-box;
   padding: 0px 10px;
   margin: 10px 10px 20px 10px;
@@ -111,25 +129,40 @@ a:visited {
   float: left;
 }
 .contents a {
-  color: rgb(110, 47, 47);
+  color: #004444;
+}
+.contents li {
+  color: gray;
 }
 
 /* ! Красивые списки */
 .list_group {
-  border-style: solid;
   border-radius: 10px;
-  border-color: rgb(167, 164, 164);
   width: 150px;
 }
 .list_group_item {
-  padding: 5px 0px;
-  border: 0;
-
-  border-bottom: rgb(122, 122, 122) 2px;
-  border-style: solid;
+  padding: 5px 20px;
+  border: 2px solid lightgray;
+  border-bottom: 0px solid rgb(122, 122, 122);
+  margin-left: -40px;
+  list-style-type: none;
+}
+.list_group_item:first-child {
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
 }
 .list_group_item:last-child {
-  border: 0;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom: 2px solid lightgray;
+}
+.list_group_item:hover {
+  color: #fff;
+  background: #004444;
+}
+.list_group_item:hover > a {
+  color: #fff;
+  text-decoration: none;
 }
 
 /* ! Табличка */
@@ -139,11 +172,6 @@ a:visited {
   text-align: center;
   width: 300px;
   margin: auto;
-}
-
-.flex_city > p > .table {
-  width: 400px;
-  float: left;
 }
 
 /* ! Разделения */
@@ -158,7 +186,19 @@ hr {
   padding: 0px 20px;
   position: relative;
   top: -13px;
-} 
+}
+ 
+/* ! Списки еды */
+.food_name {
+  font-size: larger;
+  font-weight: bold;
+}
+.food_need {
+  color: rgb(160, 25, 25);
+}
+.food_ingredients {
+  font-style: italic;
+}
 
 /* ! Зона связей */
 .contact h2 {
@@ -229,20 +269,6 @@ header {
   top: 0;
   left: 0px;
 } */
-
-/* ! Списки еды */
-.food_name {
-  font-size: larger;
-  font-weight: bold;
-}
-
-.food_need {
-  color: brown;
-}
-
-.food_ingredients {
-  font-style: italic;
-}
 
 /* ! Для узких экранов*/
 @media (max-width: 700px) {
