@@ -9,18 +9,19 @@
   </head>
 
   <body>
-    <header class="header_title shadc bg_dark">
+    <header class="header-title shadc bg-dark">
       <h1>Это <em>шапочка</em> (⊙﹏⊙)</h1>
     </header>
+
     <div class="container shadc">
-      <div class="info">
+      <div id="info" class="info separation">
         <img
           title="Эт Я"
           src="/Images/my_avatar.jpg"
           class="avatar card shadr"
           alt="Здесь была печенька"
         />
-        <div class="info_text">
+        <div class="info-text">
           <h1>Artematrr</h1>
           <p>
             Лютый <em>(в прошлом)</em> фотошопер, которому стало доставлять
@@ -32,22 +33,30 @@
           <a target="_blank" href="https://github.com/Artematrr">Гитхаб</a>
         </div>
       </div>
-      <hr />
-      <div class="contents bg_light card shadr">
-        <h2>Структура сайта</h2>
-        <ol>
-          <li><a href="#my_city">Про Кувандык</a></li>
-          <li>
-            <a href="#food_list">Кулинарные списки</a>
-            <ul>
-              <li>Словать еды</li>
-              <li>Что какие ингридиенты требует</li>
-            </ul>
-          </li>
-        </ol>
+
+      <div class="separation">
+        <div class="contents bg-light card shadr">
+          <h2>Структура страницы:</h2>
+          <ol>
+            <li>
+              <a href="#info">Информация обо мне</a>
+            </li>
+            <li><a href="#my-city">Про Кувандык</a></li>
+            <li>
+              <a href="#food-list">Кулинарные списки</a>
+              <ul>
+                <li>Словать еды</li>
+                <li>Что какие ингридиенты требует</li>
+              </ul>
+            </li>
+            <li><a href="#more-links">Сайты, которые создал автор</a></li>
+            <li><a href="#services">Услуги вашего покорного</a></li>
+            <li><a href="#contact">Как связаться с автором</a></li>
+          </ol>
+        </div>
       </div>
-      <hr />
-      <div class="flex_city" id="my_city">
+
+      <div class="my-city separation" id="my-city">
         <h3>Про мой родной город</h3>
         <p>
           <img
@@ -56,8 +65,7 @@
             title="Родина-мать"
             alt="Здесь была картинка Кувандыка"
           />
-          <figcaption>Родина-мать</figcaption>
-
+          <!-- <figcaption>Родина-мать</figcaption> -->
           Я родился и вырос в
           <a
             target="_blank"
@@ -71,15 +79,14 @@
           pariatur voluptatum. Debitis consectetur deleniti a tempora inventore
           .
         </p>
-
-        <table class="table card bg_light">
-          <tr class="bg_dark">
+        <table class="table bg-light">
+          <tr class="bg-dark">
             <th>Город</th>
             <th>Плюсы</th>
             <th>Минусы</th>
           </tr>
           <tr>
-            <td class="bg_dark" rowspan="3">Кувандык</td>
+            <td class="bg-dark" rowspan="3">Кувандык</td>
             <td>+</td>
             <td>-</td>
           </tr>
@@ -89,20 +96,19 @@
           </tr>
         </table>
       </div>
-      <hr />
 
-      <div id="food_list">
+      <div id="food-list separation">
         <h3><q>Я люблю готовить</q></h3>
         <dl>
           <ul>
             <li class="list">
-              <dt class="food_name">Омлет:</dt>
+              <dt class="food-name">Омлет:</dt>
               <dd>
                 яичница, к которой добавляется молоко или другая жидкость,
                 иногда даже немного какой-либо муки.
               </dd>
-              <span class="food_need">Требует:</span>
-              <span class="food_ingredients">
+              <span class="food-need">Требует:</span>
+              <span class="food-ingredients">
                 <ul>
                   <li>Яички</li>
                   <li>Колбаска</li>
@@ -115,36 +121,70 @@
         <hr />
       </div>
 
-      <div class="more_links">
+      <div id="more-links" class="more-links separation">
         <h3>Разные мною созданные странички</h3>
-        <ul class="shadr list_group bg_light">
-          <li class="list_group_item">
+        <ul class="shadr list-group bg-light">
+          <li class="list-group-item">
             <a target="_blank" href="Pages/index_2.html">Чужой сайт</a>
           </li>
-          <li class="list_group_item">
+          <li class="list-group-item">
             <a href="/Pages/index_3.html" target="_blank">Чужое резюме</a>
           </li>
-          <li class="list_group_item">
+          <li class="list-group-item">
             <a href="/" target="_blank">Трилистник</a>
           </li>
         </ul>
       </div>
-      <hr />
 
-      <div class="contact">
+      <div id="services" class="services separation">
+        <h3>Я предоставляю следующие услуги:</h3>
+        <div class="svcards">
+          <div class="svcard card shadr">
+            <img class="svcard-img-top image" src="/Images/Scotch_meme.jpg" />
+            <div class="svcard-body">
+              <h5 class="svcard-title">Создание мемов</h5>
+              <p class="svcard-text">
+                Я сделаю оригинальный мем для или про вас. Вы получите бурю
+                эмоций и сможете орать над хохмой со своими друзьями.
+              </p>
+              <a href="/" target="_blank" class="services-btn"
+                >Узнать подробнее</a
+              >
+            </div>
+          </div>
+          <div class="svcard card shadr">
+            <img
+              class="svcard-img-top image"
+              src="/Images/abstract-bw-seamless-pattern-3.jpg"
+            />
+            <div class="svcard-body">
+              <h5 class="svcard-title">Вёрстка сайтов</h5>
+              <p class="svcard-text">
+                Свесрчу вам страницу в интернете за недорого.
+              </p>
+              <a href="/" target="_blank" class="services-btn"
+                >Узнать подробнее</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="contact" class="contact">
+        <!-- todo Чтоб подчёркивались анимацией или вспывали, увеличиваясь -->
         <h2>Связаться со мной</h2>
         <form action="/">
           <div class="row">
-            <div class="form_group">
+            <div class="form-group">
               <label for="name">Ваше имя:</label>
               <input type="text" id="name" placeholder="Введите ваше имя..." />
             </div>
-            <div class="form_group">
+            <div class="form-group">
               <label for="email">Ваш email:</label>
               <input type="email" id="email" placeholder="Введите email..." />
             </div>
           </div>
-          <div class="form_group">
+          <div class="form-group">
             <label for="text">Вашe сообщение:</label>
             <textarea
               id="text"
@@ -153,7 +193,11 @@
               cols="15"
             ></textarea>
           </div>
-          <input class="btn bg_dark card" type="submit" value="Связаться!" />
+          <input
+            class="contact-btn bg-dark card"
+            type="submit"
+            value="Связаться!"
+          />
         </form>
       </div>
 
@@ -162,8 +206,8 @@
       </div> -->
     </div>
 
-    <footer class="bg_dark">
-      <p>Вот и всё, ребятки.</p>
+    <footer class="bg-dark">
+      <p>Вот и дно, ребятки.</p>
     </footer>
   </body>
 </html>
