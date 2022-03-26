@@ -4,14 +4,21 @@ body {
   font: normal 16px 'Raleway', sans-serif;
   color: black;
   margin: 0px;
+  /* background: rgb(232, 238, 237); */
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url(/Images/wave-seamless_pattern-1.jpg);
+  background-size: auto;
 }
-
 div {
   width: 100%;
   overflow: hidden;
 }
 
-/* Цветовая схема */
+.card {
+  border-radius: 20px;
+}
+
+/* ! Цветовая схема */
 .bg_light {
   color: #000;
   background-color: aliceblue;
@@ -27,9 +34,8 @@ div {
 
 /* ! Верхушка и низушка */
 
-header,
-footer {
-  padding: 10px;
+header {
+  padding: 1px;
 }
 .header_title {
   color: #fff;
@@ -38,13 +44,17 @@ footer {
   font-size: 20px;
 }
 .container {
+  border-radius: 20px;
+  background: #fff;
   padding: 0px 10px;
   box-sizing: border-box;
   max-width: 1000px;
   margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 footer {
-  padding: auto 10px;
+  padding: 1px;
   text-align: center;
   color: rgb(236, 236, 236);
 }
@@ -75,10 +85,6 @@ a:visited {
   box-shadow: 0px 10px 14px rgba(0, 0, 0, 0.25);
 }
 
-.card {
-  border-radius: 20px;
-}
-
 /* ! Верхняя информация */
 .info {
   display: flex;
@@ -95,6 +101,21 @@ a:visited {
 }
 .info_text h4 {
   margin-bottom: 10px;
+}
+
+/* ! Оглавление */
+.contents {
+  box-sizing: border-box;
+  padding: 0px 10px;
+  margin: 10px 10px 20px 10px;
+  width: 400px;
+  float: left;
+}
+.contents a {
+  color: #004444;
+}
+.contents li {
+  color: gray;
 }
 
 /* ! Картиночки */
@@ -120,60 +141,6 @@ a:visited {
   margin-bottom: 20px;
 }
 
-/* ! Оглавление */
-.contents {
-  box-sizing: border-box;
-  padding: 0px 10px;
-  margin: 10px 10px 20px 10px;
-  width: 400px;
-  float: left;
-}
-.contents a {
-  color: #004444;
-}
-.contents li {
-  color: gray;
-}
-
-/* ! Красивые списки */
-.list_group {
-  border-radius: 10px;
-  width: 150px;
-}
-.list_group_item {
-  padding: 5px 20px;
-  border: 2px solid lightgray;
-  border-bottom: 0px solid rgb(122, 122, 122);
-  margin-left: -40px;
-  list-style-type: none;
-}
-.list_group_item:first-child {
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
-}
-.list_group_item:last-child {
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-  border-bottom: 2px solid lightgray;
-}
-.list_group_item:hover {
-  color: #fff;
-  background: #004444;
-}
-.list_group_item:hover > a {
-  color: #fff;
-  text-decoration: none;
-}
-
-/* ! Табличка */
-.table {
-  background-color: aliceblue;
-  border: solid 2px;
-  text-align: center;
-  width: 300px;
-  margin: auto;
-}
-
 /* ! Разделения */
 hr {
   border: none;
@@ -187,14 +154,56 @@ hr {
   position: relative;
   top: -13px;
 }
- 
+
+/* ! Табличка */
+.table {
+  background-color: aliceblue;
+  border: solid 2px black;
+  text-align: center;
+  width: 300px;
+  margin: auto;
+}
+
+/* ! Красивые списки */
+.list_group {
+  border-radius: 10px;
+  width: 200px;
+}
+.list_group_item {
+  padding: 5px 20px;
+  border: 2px solid black;
+  border-bottom: 0px;
+  margin-left: -40px;
+  list-style-type: none;
+}
+.list_group_item:first-child {
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.list_group_item:last-child {
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom: 2px solid black;
+}
+.list_group_item:hover {
+  color: #fff;
+  background: #004444;
+}
+.list_group_item:hover > a {
+  color: #fff;
+  text-decoration: none;
+}
+
 /* ! Списки еды */
+.list {
+  list-style-type: square;
+}
 .food_name {
   font-size: larger;
   font-weight: bold;
 }
 .food_need {
-  color: rgb(160, 25, 25);
+  color: #004444;
 }
 .food_ingredients {
   font-style: italic;
@@ -238,20 +247,20 @@ hr {
   margin-right: 0;
 }
 .btn {
-  background: #111;
+  /* background: №111; */
+  /* color: #fff; */
   padding: 15px 20px;
   margin: 10px auto;
   display: grid;
-  color: #fff;
   border: none;
   font-family: inherit;
   cursor: pointer;
 }
 .btn:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
-/* ! Закреплённые вещи */
+/* ! Закрепления на экране */
 /* 
 .aside {
   position: fixed;

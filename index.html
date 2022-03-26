@@ -12,9 +12,10 @@
     <header class="header_title shadc bg_dark">
       <h1>Это <em>шапочка</em> (⊙﹏⊙)</h1>
     </header>
-    <div class="container">
+    <div class="container shadc">
       <div class="info">
         <img
+          title="Эт Я"
           src="/Images/my_avatar.jpg"
           class="avatar card shadr"
           alt="Здесь была печенька"
@@ -31,7 +32,7 @@
           <a target="_blank" href="https://github.com/Artematrr">Гитхаб</a>
         </div>
       </div>
-      <hr>
+      <hr />
       <div class="contents bg_light card shadr">
         <h2>Структура сайта</h2>
         <ol>
@@ -45,7 +46,7 @@
           </li>
         </ol>
       </div>
-      <hr>
+      <hr />
       <div class="flex_city" id="my_city">
         <h3>Про мой родной город</h3>
         <p>
@@ -55,6 +56,8 @@
             title="Родина-мать"
             alt="Здесь была картинка Кувандыка"
           />
+          <figcaption>Родина-мать</figcaption>
+
           Я родился и вырос в
           <a
             target="_blank"
@@ -67,32 +70,33 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Non modi
           pariatur voluptatum. Debitis consectetur deleniti a tempora inventore
           .
-          <table class="table bg_light">
-            <tr class="bg_dark">
-              <th>Город</th>
-              <th>Плюсы</th>
-              <th>Минусы</th>
-            </tr>
-            <tr>
-              <td class="bg_dark" rowspan="3">Кувандык</td>
-              <td>+</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>+</td>
-              <td>-</td>
-            </tr>
-          </table>
-        </div>
         </p>
+
+        <table class="table card bg_light">
+          <tr class="bg_dark">
+            <th>Город</th>
+            <th>Плюсы</th>
+            <th>Минусы</th>
+          </tr>
+          <tr>
+            <td class="bg_dark" rowspan="3">Кувандык</td>
+            <td>+</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>+</td>
+            <td>-</td>
+          </tr>
+        </table>
+      </div>
       <hr />
 
       <div id="food_list">
         <h3><q>Я люблю готовить</q></h3>
         <dl>
           <ul>
-            <li>
-              <dt><span class="food_name">Омлет:</span></dt>
+            <li class="list">
+              <dt class="food_name">Омлет:</dt>
               <dd>
                 яичница, к которой добавляется молоко или другая жидкость,
                 иногда даже немного какой-либо муки.
@@ -113,17 +117,19 @@
 
       <div class="more_links">
         <h3>Разные мною созданные странички</h3>
-        <ul class="shadr list_group">
+        <ul class="shadr list_group bg_light">
           <li class="list_group_item">
             <a target="_blank" href="Pages/index_2.html">Чужой сайт</a>
           </li>
           <li class="list_group_item">
             <a href="/Pages/index_3.html" target="_blank">Чужое резюме</a>
           </li>
-          <li class="list_group_item"><a href="/" target="_blank">Трилистник</a></li>
+          <li class="list_group_item">
+            <a href="/" target="_blank">Трилистник</a>
+          </li>
         </ul>
       </div>
-      <hr>
+      <hr />
 
       <div class="contact">
         <h2>Связаться со мной</h2>
@@ -147,7 +153,7 @@
               cols="15"
             ></textarea>
           </div>
-          <input class="btn" type="submit" value="Связаться!" />
+          <input class="btn bg_dark card" type="submit" value="Связаться!" />
         </form>
       </div>
 
