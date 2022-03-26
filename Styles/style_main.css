@@ -15,13 +15,13 @@ div {
 }
 
 .card {
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 /* ! Цветовая схема */
 .bg_light {
   color: #000;
-  background-color: aliceblue;
+  background-color: rgb(246, 253, 255);
 }
 .bg_dark {
   color: #fff;
@@ -33,7 +33,6 @@ div {
 }
 
 /* ! Верхушка и низушка */
-
 header {
   padding: 1px;
 }
@@ -157,7 +156,7 @@ hr {
 
 /* ! Табличка */
 .table {
-  background-color: aliceblue;
+  background-color: rgb(246, 253, 255);
   border: solid 2px black;
   text-align: center;
   width: 300px;
@@ -167,7 +166,7 @@ hr {
 /* ! Красивые списки */
 .list_group {
   border-radius: 10px;
-  width: 200px;
+  width: 150px;
 }
 .list_group_item {
   padding: 5px 20px;
