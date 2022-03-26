@@ -5,8 +5,8 @@ body {
   color: black;
   margin: 0px;
   /* background: rgb(232, 238, 237); */
-  background-color: rgba(0, 0, 0, 0.5);
   background-image: url(/Images/wave-seamless_pattern-1.jpg);
+
   background-size: auto;
 }
 div {
@@ -18,16 +18,20 @@ div {
   border-radius: 10px;
 }
 
+.separation {
+  border-bottom: 10px dotted #004444;
+  border-bottom-width: 5px;
+}
 /* ! Цветовая схема */
-.bg_light {
+.bg-light {
   color: #000;
   background-color: rgb(246, 253, 255);
 }
-.bg_dark {
+.bg-dark {
   color: #fff;
   background-color: #004444;
 }
-.bg_accent {
+.bg-accent {
   color: #fff;
   background-color: #ff8e32;
 }
@@ -36,7 +40,7 @@ div {
 header {
   padding: 1px;
 }
-.header_title {
+.header-title {
   color: #fff;
   text-align: center;
   font-weight: bolder;
@@ -45,7 +49,7 @@ header {
 .container {
   border-radius: 20px;
   background: #fff;
-  padding: 0px 10px;
+  padding: 0px 20px;
   box-sizing: border-box;
   max-width: 1000px;
   margin: auto;
@@ -95,10 +99,10 @@ a:visited {
   font-style: italic;
   word-spacing: 3px;
 }
-.info_text {
+.info-text {
   margin-left: 30px;
 }
-.info_text h4 {
+.info-text h4 {
   margin-bottom: 10px;
 }
 
@@ -118,10 +122,10 @@ a:visited {
 }
 
 /* ! Картиночки */
-.flex_city > p > .image {
+.my-city > p > .image {
   float: right;
   clear: right;
-  margin: 10px 0px 10px 10px;
+  margin: 0px 0px 10px 10px;
 }
 .image {
   width: 300px;
@@ -143,11 +147,14 @@ a:visited {
 /* ! Разделения */
 hr {
   border: none;
-  border-top: 5px double;
-  width: 90%;
-  /* text-align: center; */
+  border-top: 2px dotted;
+  /* border-top: 5px double; */
+  width: 95%;
+  color: #004444;
+  text-align: center;
 }
-/* hr:after {
+
+hr:after {
   background-color: #fff;
   padding: 0px 20px;
   position: relative;
@@ -157,68 +164,114 @@ hr {
 /* ! Табличка */
 .table {
   background-color: rgb(246, 253, 255);
-  border: solid 2px black;
+  border: solid 2px #004444;
   text-align: center;
   width: 300px;
-  margin: auto;
-}
-
-/* ! Красивые списки */
-.list_group {
-  border-radius: 10px;
-  width: 150px;
-}
-.list_group_item {
-  padding: 5px 20px;
-  border: 2px solid black;
-  border-bottom: 0px;
-  margin-left: -40px;
-  list-style-type: none;
-}
-.list_group_item:first-child {
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
-}
-.list_group_item:last-child {
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-  border-bottom: 2px solid black;
-}
-.list_group_item:hover {
-  color: #fff;
-  background: #004444;
-}
-.list_group_item:hover > a {
-  color: #fff;
-  text-decoration: none;
+  margin-inline: auto;
+  margin-bottom: 10px;
 }
 
 /* ! Списки еды */
 .list {
   list-style-type: square;
 }
-.food_name {
+.food-name {
   font-size: larger;
   font-weight: bold;
 }
-.food_need {
+.food-need {
   color: #004444;
 }
-.food_ingredients {
+.food-ingredients {
   font-style: italic;
+}
+
+/* ! Красивые списки */
+.list-group {
+  border-radius: 10px;
+  width: 150px;
+}
+.list-group-item {
+  padding: 5px 20px;
+  border: 2px solid #004444;
+  border-bottom: 0px;
+  margin-left: -40px;
+  list-style-type: none;
+}
+.list-group-item:first-child {
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.list-group-item:last-child {
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom: 2px solid black;
+}
+.list-group-item:hover {
+  color: #fff;
+  background: #004444;
+}
+.list-group-item:hover > a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ! Мои услуги */
+.svcards {
+  /* display: flex; */
+  justify-content: center;
+}
+.svcard {
+  border: 3px solid #004444;
+  width: 300px;
+  margin-bottom: 20px;
+  margin-inline: 10px;
+}
+.svcard-img-top {
+  width: 100%;
+}
+.svcard-title {
+  margin: 10px 5px;
+  font-size: 30px;
+}
+.svcard-body {
+  background-color: rgb(246, 253, 255);
+  border-top-width: 3px;
+  border-top-style: solid;
+  border-top-color: inherit;
+  padding-bottom: 20px;
+}
+.svcard-text {
+  margin-inline: 5px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.services-btn {
+  padding: 10px;
+  margin-left: 5px;
+  margin-bottom: 20px;
+  background-color: #004444;
+  border-radius: 5px;
+}
+.services a {
+  color: white;
+  text-decoration: none;
+}
+.services a:hover {
+  opacity: 0.8;
 }
 
 /* ! Зона связей */
 .contact h2 {
   text-align: center;
 }
-.form_group label {
+.form-group label {
   display: block;
   font-size: 14px;
   color: #86898f;
 }
-.form_group input,
-.form_group textarea {
+.form-group input,
+.form-group textarea {
   width: 100%;
   box-sizing: border-box;
   border: none;
@@ -229,7 +282,7 @@ hr {
   outline: none;
   font-family: inherit;
 }
-.form_group textarea {
+.form-group textarea {
   min-height: 60px;
   min-width: 500px;
   max-width: 100%;
@@ -238,14 +291,14 @@ hr {
   display: flex;
   margin-bottom: 20px;
 }
-.row > .form_group {
+.row > .form-group {
   width: 50%;
   margin-right: 20px;
 }
-.row > .form_group:last-child {
+.row > .form-group:last-child {
   margin-right: 0;
 }
-.btn {
+.contact-btn {
   /* background: №111; */
   /* color: #fff; */
   padding: 15px 20px;
@@ -255,7 +308,7 @@ hr {
   font-family: inherit;
   cursor: pointer;
 }
-.btn:hover {
+.contact-btn:hover {
   opacity: 0.8;
 }
 
@@ -279,7 +332,7 @@ header {
 } */
 
 /* ! Для узких экранов*/
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   .avatar {
     margin-bottom: 0px;
   }
@@ -287,7 +340,14 @@ header {
     text-align: center;
     display: block;
   }
-  .container .info_text {
+  .container .info-text {
     margin: 10px 0px;
+  }
+  .container {
+    padding: 0px 10px;
+  }
+  .svcard {
+    display: grid;
+    width: 400px;
   }
 }
