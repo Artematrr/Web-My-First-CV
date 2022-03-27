@@ -9,10 +9,18 @@
   </head>
 
   <body>
-    <header class="header-title shadc bg-dark">
-      <h1>Это <em>шапочка</em> (⊙﹏⊙)</h1>
+    <header class="shadc bg-dark">
+      <div class="header-main">
+        <h1 class="header-title">Это <em>шапочка</em> (⊙﹏⊙)</h1>
+      </div>
+      <div class="header-aside">
+        <div class="settings">
+          <h3>Отображение</h3>
+          <button class="settings-btn" id="fontup">Увеличить шрифт</button>
+          <button class="settings-btn" id="font-down">Уменьшить шрифт</button>
+        </div>
+      </div>
     </header>
-
     <div class="container shadc">
       <div id="info" class="info separation">
         <img
@@ -97,7 +105,7 @@
         </table>
       </div>
 
-      <div id="food-list separation">
+      <div id="food-list" class="food-list separation">
         <h3><q>Я люблю готовить</q></h3>
         <dl>
           <ul>
@@ -118,7 +126,6 @@
             </li>
           </ul>
         </dl>
-        <hr />
       </div>
 
       <div id="more-links" class="more-links separation">
@@ -167,6 +174,32 @@
               >
             </div>
           </div>
+          <div class="svcard card shadr">
+            <img class="svcard-img-top image" src="/Images/second_bg.jpg" />
+            <div class="svcard-body">
+              <h5 class="svcard-title">Держась за руки</h5>
+              <p class="svcard-text">
+                Договорюсь за вас на собесе. Вы будете получать большой оклад и
+                высокие рабочие места.
+              </p>
+              <a href="/" target="_blank" class="services-btn"
+                >Узнать подробнее</a
+              >
+            </div>
+          </div>
+          <div class="svcard card shadr">
+            <img
+              class="svcard-img-top image"
+              src="/Images/abstract-bw-seamless-pattern-4.jpg"
+            />
+            <div class="svcard-body">
+              <h5 class="svcard-title">Что-то ещё???</h5>
+              <p class="svcard-text">Догова.</p>
+              <a href="/" target="_blank" class="services-btn"
+                >Узнать подробнее</a
+              >
+            </div>
+          </div>
         </div>
       </div>
 
@@ -210,4 +243,13 @@
       <p>Вот и дно, ребятки.</p>
     </footer>
   </body>
+
+  <script>
+    let body = document.documentElement
+    fontup.onclick = function () {
+      // при помощи JS увеличить размер шрифта html на 2px
+      body.style.fontSize =
+        parseInt(getComputedStyle(body, '').fontSize) + 2 + 'px'
+    }
+  </script>
 </html>
