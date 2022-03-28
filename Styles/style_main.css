@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
 /* ! Основа структуры */
 body {
   font-size: 16px;
@@ -53,29 +54,27 @@ header {
   display: flex;
   padding-inline: 20px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 .header-main {
-  width: 380px;
-  justify-self: left;
+  min-width: fit-content;
 }
-.header-title {
-  width: 100%;
+.header-main-title {
   text-align: center;
   font-weight: bolder;
   font-size: 35px;
 }
 .header-aside {
-  width: 170px;
+  width: 400px;
+  min-width: min-content;
 }
 .settings {
-  width: 100%;
+  justify-content: space-around;
 }
 .settings-header {
   width: 100%;
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-block: 10px;
 }
 .settings:last-child {
   margin-bottom: 10px;
@@ -199,7 +198,7 @@ a:active {
   margin-bottom: 10px;
 } */
 
-/* ! Разделения */
+/* Разделения */
 /* 
 hr {
   border: none;
@@ -258,7 +257,7 @@ hr:after {
 /* ! Красивые списки */
 .list-group {
   border-radius: 10px;
-  width: 150px;
+  width: fit-content;
 }
 .list-group-item {
   padding: 5px 20px;
@@ -290,19 +289,16 @@ hr:after {
   display: flex;
   flex-wrap: wrap;
   column-gap: 20px;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 .svcard {
-  /* flex-grow: 1; */
-  flex-shrink: 1;
-  display: block;
   align-self: flex-start;
   border: 3px solid #004444;
-  width: 300px;
+  max-width: 300px;
+  min-width: min-content;
   margin-bottom: 20px;
 }
 .svcard-img-top {
-  flex-shrink: 1;
   width: 100%;
 }
 .svcard-title {
@@ -414,18 +410,24 @@ header {
 } */
 
 /* ! Для узких экранов*/
+@media (max-width: 700px) {
+  .svcard {
+    display: grid;
+    width: 259px;
+    box-shadow: 0px 10px 14px rgba(0, 0, 0, 0.25);
+  }
+}
 @media (max-width: 600px) {
   header {
     display: grid;
-    justify-content: center;
   }
-  .header-aside {
-    width: 100%;
+  .settings {
+    display: grid;
+    gap: 10px;
   }
   .settings-btn {
     width: 200px;
     padding-block: 10px;
-    /* margin-bottom: 10px; */
   }
   .avatar {
     margin-bottom: 0px;
@@ -437,7 +439,7 @@ header {
   .info-text > h1 {
     margin-top: 0px;
   }
-  .container .info-text {
+  .info-text {
     margin: 10px 0px;
   }
   .container {
@@ -445,7 +447,6 @@ header {
   }
   .svcard {
     display: grid;
-    justify-content: center;
     width: 400px;
     box-shadow: 0px 10px 14px rgba(0, 0, 0, 0.25);
   }
