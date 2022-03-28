@@ -11,7 +11,7 @@ body {
 }
 div {
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
 }
 .card {
   border-radius: 10px;
@@ -71,13 +71,13 @@ header {
 .settings {
   width: 100%;
 }
-.settings h3 {
+.settings-header {
   width: 100%;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.settings :last-child {
+.settings:last-child {
   margin-bottom: 10px;
 }
 .settings-btn {
@@ -177,13 +177,18 @@ a:active {
 }
 
 /* ! Картиночки */
-.my-city > p > .image {
-  float: right;
-  clear: right;
-  margin: 0px 0px 20px 15px;
-}
 .image {
   width: 300px;
+}
+.avatar {
+  width: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.my-city > p > .image {
+  float: right;
+  clear: both;
+  margin: 0px 0px 20px 15px;
 }
 /* figcaption {
   font-style: italic;
@@ -193,11 +198,6 @@ a:active {
   margin-left: 20px;
   margin-bottom: 10px;
 } */
-.avatar {
-  width: 200px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
 
 /* ! Разделения */
 /* 
@@ -220,9 +220,24 @@ hr:after {
   background-color: #f6fdff;
   border: solid 2px #004444;
   text-align: center;
-  width: 300px;
+  width: auto;
   margin-inline: auto;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+.table-head > * {
+  padding: 5px 10px;
+  border-radius: 1px;
+}
+.table-head :first-child {
+  border-top-left-radius: 10px;
+}
+.table-head :last-child {
+  border-top-right-radius: 10px;
+}
+.table-items > * {
+  padding-inline: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 /* ! Списки еды */
@@ -272,17 +287,22 @@ hr:after {
 
 /* ! Мои услуги */
 .svcards {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  justify-content: space-evenly;
 }
 .svcard {
+  /* flex-grow: 1; */
+  flex-shrink: 1;
   display: block;
-  justify-self: center;
+  align-self: flex-start;
   border: 3px solid #004444;
   width: 300px;
   margin-bottom: 20px;
-  margin-inline: 10px;
 }
 .svcard-img-top {
+  flex-shrink: 1;
   width: 100%;
 }
 .svcard-title {
@@ -308,15 +328,17 @@ hr:after {
   margin-bottom: 20px;
   background-color: #004444;
   border-radius: 5px;
+  border: 2px solid #004444;
 }
 .services a {
   color: white;
   text-decoration: none;
 }
 .services a:hover {
-  /* color: #000; */
-  /* background: #f6fdff; */
-  opacity: 0.8;
+  color: #000;
+  background: #f6fdff;
+  border: 2px solid #004444;
+  /* opacity: 0.8; */
 }
 
 /* ! Зона связей */
@@ -342,7 +364,7 @@ hr:after {
 }
 .form-group textarea {
   min-height: 60px;
-  min-width: 500px;
+  min-width: 400px;
   max-width: 100%;
 }
 .row {
@@ -358,15 +380,18 @@ hr:after {
 }
 .contact-btn {
   border-radius: 5px;
-  padding: 15px 20px;
+  padding: 10px 15px;
   margin: 10px auto;
   display: grid;
-  border: none;
+  border: 2px solid #004444;
   font-family: inherit;
   cursor: pointer;
 }
 .contact-btn:hover {
-  opacity: 0.9;
+  /* opacity: 0.9; */
+  color: #000;
+  background: #f6fdff;
+  border: 2px solid #004444;
 }
 
 /* ! Закрепления на экране */
@@ -400,6 +425,7 @@ header {
   .settings-btn {
     width: 200px;
     padding-block: 10px;
+    /* margin-bottom: 10px; */
   }
   .avatar {
     margin-bottom: 0px;
