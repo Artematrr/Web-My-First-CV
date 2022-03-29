@@ -171,7 +171,6 @@ a:active {
   margin: 10px 10px 20px 10px;
   width: 400px;
   float: left;
-  transition: all 0.2s ease-in;
 }
 .contents a {
   color: #004444;
@@ -194,14 +193,6 @@ a:active {
   clear: both;
   margin: 0px 0px 20px 15px;
 }
-/* figcaption {
-  font-style: italic;
-  text-align: left;
-  float: right;
-  margin-top: 10px;
-  margin-left: 20px;
-  margin-bottom: 10px;
-} */
 
 /* Разделения */
 /* 
@@ -218,6 +209,7 @@ hr:after {
   position: relative;
   top: -13px;
 } */
+
 /* ! Табличка */
 .table {
   background-color: #f6fdff;
