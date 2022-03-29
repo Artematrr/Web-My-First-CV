@@ -377,7 +377,7 @@ hr:after {
 }
 .form-group input:hover,
 .form-group textarea:hover {
-  border-bottom: 2px solid #006666;
+  border-bottom: 2px solid #6ad1d1;
 }
 .form-group input:focus,
 .form-group textarea:focus {
