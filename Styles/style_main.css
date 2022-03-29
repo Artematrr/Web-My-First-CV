@@ -81,6 +81,7 @@ header {
 }
 .settings-btn {
   display: flex;
+  /* border: none; */
   width: 140px;
   align-content: center;
   margin: auto;
@@ -94,11 +95,14 @@ header {
   background-color: #004444;
   border-radius: 5px;
   cursor: pointer;
-  /* border: none; */
+  transition: all 0.2s ease-in;
 }
 .settings-btn:hover {
   color: #000;
   background: #f6fdff;
+}
+.settings-btn:active {
+  font-weight: bold;
 }
 .container {
   border-radius: 20px;
@@ -167,6 +171,7 @@ a:active {
   margin: 10px 10px 20px 10px;
   width: 400px;
   float: left;
+  transition: all 0.2s ease-in;
 }
 .contents a {
   color: #004444;
@@ -213,7 +218,6 @@ hr:after {
   position: relative;
   top: -13px;
 } */
-
 /* ! Табличка */
 .table {
   background-color: #f6fdff;
@@ -223,6 +227,7 @@ hr:after {
   margin-inline: auto;
   margin-bottom: 15px;
   border-radius: 10px;
+  width: max-content;
 }
 .table-head > * {
   padding: 5px 10px;
@@ -248,16 +253,23 @@ hr:after {
   font-weight: bold;
 }
 .food-need {
+  margin-top: 5px;
+  width: fit-content;
   color: #004444;
+
+  padding-left: 40px;
 }
 .food-ingredients {
+  width: fit-content;
   font-style: italic;
+  color: #000;
 }
 
 /* ! Красивые списки */
 .list-group {
   border-radius: 10px;
   width: fit-content;
+  transition: all 0.1s ease-out;
 }
 .list-group-item {
   padding: 5px 20px;
@@ -265,6 +277,7 @@ hr:after {
   border-bottom: 0px;
   margin-left: -40px;
   list-style-type: none;
+  transition: all 0.2s ease-out;
 }
 .list-group-item:first-child {
   border-top-right-radius: 8px;
@@ -297,6 +310,7 @@ hr:after {
   width: 300px;
   min-width: min-content;
   margin-bottom: 20px;
+  transition: all 0.1s ease-in;
 }
 .svcard-img-top {
   width: 100%;
@@ -325,16 +339,18 @@ hr:after {
   background-color: #004444;
   border-radius: 5px;
   border: 2px solid #004444;
+  transition: margin 0.3s ease-in;
 }
 .services a {
   color: white;
   text-decoration: none;
+  transition: all 0.3s ease-out;
 }
 .services a:hover {
   color: #000;
   background: #f6fdff;
   border: 2px solid #004444;
-  /* opacity: 0.8; */
+  transition: all 0.3s ease-out;
 }
 
 /* ! Зона связей */
@@ -352,16 +368,32 @@ hr:after {
   box-sizing: border-box;
   border: none;
   background: transparent;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2px solid rgb(233, 233, 233);
   color: #000;
   padding: 15px 0 10px;
   outline: none;
   font-family: inherit;
+  transition: all 0.2s ease-in;
 }
 .form-group textarea {
   min-height: 60px;
   min-width: 400px;
   max-width: 100%;
+}
+.form-group input:invalid {
+  border-bottom: 2px solid red;
+}
+.form-group input:hover,
+.form-group textarea:hover {
+  border-bottom: 2px solid #006666;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-bottom: 2px solid #004444;
+}
+.form-group input:active,
+.form-group textarea:active {
+  border-bottom: 2px solid #006666;
 }
 .row {
   display: flex;
@@ -372,7 +404,7 @@ hr:after {
   margin-right: 20px;
 }
 .row > .form-group:last-child {
-  margin-right: 0;
+  margin-right: 0px;
 }
 .contact-btn {
   border-radius: 5px;
@@ -381,11 +413,15 @@ hr:after {
   display: grid;
   font-family: inherit;
   cursor: pointer;
+  transition: all 0.3s ease-out;
 }
 .contact-btn:hover {
   color: #000;
   background: #f6fdff;
   border: 2px solid #004444;
+}
+.contact-btn:active {
+  font-weight: bold;
 }
 
 /* ! Закрепления на экране */
