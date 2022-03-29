@@ -95,7 +95,9 @@ header {
   background-color: #004444;
   border-radius: 5px;
   cursor: pointer;
-  transition: all 0.2s ease-in;
+  border-width: 0;
+  margin-bottom: 5px;
+  transition: all 0.06s ease-in;
 }
 .settings-btn:hover {
   color: #000;
@@ -103,6 +105,7 @@ header {
 }
 .settings-btn:active {
   font-weight: bold;
+  transform: translateY(3px);
 }
 .container {
   border-radius: 20px;
@@ -248,7 +251,6 @@ hr:after {
   margin-top: 5px;
   width: fit-content;
   color: #004444;
-
   padding-left: 40px;
 }
 .food-ingredients {
@@ -260,7 +262,8 @@ hr:after {
 /* ! Красивые списки */
 .list-group {
   border-radius: 10px;
-  width: fit-content;
+  /* width: fit-content; */
+  width: 300px;
   transition: all 0.1s ease-out;
 }
 .list-group-item {
@@ -270,6 +273,9 @@ hr:after {
   margin-left: -40px;
   list-style-type: none;
   transition: all 0.2s ease-out;
+}
+.list-group-item:hover {
+  padding-left: 50px;
 }
 .list-group-item:first-child {
   border-top-right-radius: 8px;
@@ -304,6 +310,10 @@ hr:after {
   margin-bottom: 20px;
   transition: all 0.1s ease-in;
 }
+.svcard:hover {
+  row-gap: 0px;
+}
+/* todo Отфиксить неполное заполение */
 .svcard-img-top {
   width: 100%;
 }
@@ -331,12 +341,18 @@ hr:after {
   background-color: #004444;
   border-radius: 5px;
   border: 2px solid #004444;
-  transition: margin 0.3s ease-in;
+  transition: all 0.1s ease-in;
+}
+.services-btn:active {
+  transform: translateY(8px);
+}
+.services-btn:hover {
+  margin-left: 30px;
 }
 .services a {
   color: white;
   text-decoration: none;
-  transition: all 0.3s ease-out;
+  transition: all 0.15s ease-out;
 }
 .services a:hover {
   color: #000;
@@ -377,7 +393,7 @@ hr:after {
 }
 .form-group input:hover,
 .form-group textarea:hover {
-  border-bottom: 2px solid #6ad1d1;
+  border-bottom: 2px solid #accad3;
 }
 .form-group input:focus,
 .form-group textarea:focus {
@@ -405,7 +421,7 @@ hr:after {
   display: grid;
   font-family: inherit;
   cursor: pointer;
-  transition: all 0.3s ease-out;
+  transition: all 0.2s ease-out;
 }
 .contact-btn:hover {
   color: #000;
@@ -414,6 +430,7 @@ hr:after {
 }
 .contact-btn:active {
   font-weight: bold;
+  transform: translateY(3px);
 }
 
 /* ! Закрепления на экране */
