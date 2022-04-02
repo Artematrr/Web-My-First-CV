@@ -1,4 +1,104 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+body {
+	font-family: 'Raleway', Arial, sans-serif;
+	margin: 0;
+}
+footer,
+header {
+	padding: 10px;
+}
+footer ol {
+	list-style: georgian;
+}
+footer ul {
+	list-style: square;
+}
 .container {
-  display: grid;
-  gap: 10px;
+	padding-inline: 10px;
+}
+.header-heading {
+	font-size: calc(14px + 2vw);
+}
+
+.bg-dark {
+	background: rgb(69, 94, 134);
+	color: #fff;
+}
+
+.images {
+	display: grid;
+	/* margin: 0 auto;
+	grid-template-areas:
+		'img-1 img-2 img-3 '
+		'img-1 img-2 img-4 '
+		'img-5 img-5 img-6 ';
+	grid-template-rows: 2fr 3fr 1fr;
+	grid-template-columns: 1fr 10fr 2fr;
+	grid-gap: 2vw;
+}
+.images > div {
+	background: rgba(18, 80, 128, 0.5);
+	color: #fff;
+	text-align: center;
+	font-size: 5vw;
+	padding: 0.5em;
+}
+.images > div:nth-child(1) {
+	grid-area: img-1;
+}
+.images > div:nth-child(2) {
+	grid-area: img-2;
+}
+.images > div:nth-child(3) {
+	grid-area: img-3;
+}
+.images > div:nth-child(4) {
+	grid-area: img-4;
+}
+.images > div:nth-child(5) {
+	grid-area: img-5;
+}
+.images > div:nth-child(6) {
+	grid-area: img-6;
+}
+
+@media (min-width: 1800px) {
+	.header-heading {
+		font-size: 50px;
+	}
+}
+ */
+
+/* ! Пример с Auto-fill */
+/* #grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	grid-gap: 2vw;
+}
+#grid > div {
+	font-size: 5vw;
+	padding: 0.5em;
+	background: gold;
+	text-align: center;
+} */
+
+/* ! Пример с Auto-fit */
+.grid {
+	display: grid;
+	grid-gap: 2vw;
+	border: 1px solid black;
+	margin: 10px;
+}
+.grid > div {
+	font-size: 5vw;
+	padding: 0.5em;
+	background: gold;
+	text-align: center;
+}
+.auto-fill {
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+.auto-fit {
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }

@@ -1,0 +1,59 @@
+body {
+	display: grid;
+	grid-template:
+		'header header 	header' 60px
+		'nav    article ads' 1fr
+		'.    	footer  .' 60px
+		/ 20% 1fr 15%;
+
+	grid-gap: 10px;
+	height: 100vh;
+	margin: 0;
+}
+header,
+footer,
+article,
+nav,
+div {
+	padding: 20px;
+	background: rgb(247, 177, 190);
+	text-align: center;
+}
+#pageHeader {
+	grid-area: header;
+}
+#pageFooter {
+	grid-area: footer;
+}
+#mainArticle {
+	grid-area: article;
+}
+#mainNav {
+	grid-area: nav;
+}
+#siteAds {
+	grid-area: ads;
+}
+
+/* Мобильные устройства */
+@media (max-width: 800px) {
+	body {
+		grid-template:
+			'header'
+			'nav'
+			'ads'
+			'article'
+			'footer'
+			/ 1fr;
+		/* grid-template-columns: repeat(Auto-fit, minmax(150px, 1fr)); */
+	}
+}
+/* Ультраширокие экраны */
+@media (min-width: 1500px) {
+	body {
+		grid-template-areas:
+			'nav	header header'
+			'nav  article ads'
+			'nav	footer footer';
+	}
+}

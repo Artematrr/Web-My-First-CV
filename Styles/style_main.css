@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+/* @import 'flexboxgrid2/flexboxgrid2.css'; */
 
 /* ! Основа структуры */
 body {
@@ -273,6 +274,9 @@ hr:after {
 	list-style-type: none;
 	transition: all 0.2s ease-out;
 }
+.list-group-item p {
+	margin-block: 0px;
+}
 .list-group-item:hover {
 	padding-left: 50px;
 }
@@ -456,6 +460,7 @@ header {
 } */
 
 /* ! Для узких экранов*/
+
 @media (max-width: 700px) {
 	.svcard {
 		display: grid;
@@ -463,6 +468,7 @@ header {
 		box-shadow: 0px 10px 14px rgba(0, 0, 0, 0.25);
 	}
 }
+
 @media (max-width: 600px) {
 	header {
 		display: grid;
