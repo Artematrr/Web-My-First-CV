@@ -125,51 +125,54 @@ footer {
 	color: #f6fdff;
 }
 
-#menu {
+.menu {
 	font-weight: bold;
 	text-align: center;
-	justify-items: center;
+	/* justify-items: center; */
 	margin-top: 10px;
 	margin-inline: 10px;
 	padding: 5px;
 	position: sticky;
-	/* display: grid; */
-	display: block;
 }
-
-#menu li {
-	float: left;
+.menu * {
+	margin: 0;
+	padding: 0;
+}
+.menu ul,
+.menu ol {
 	list-style: none;
-	width: 250px;
-	margin-left: -40px;
+}
+.menu > ul {
+	display: flex;
+	justify-content: center;
+}
+.menu > ul li {
 	position: relative;
 }
-#menu li a {
+.menu > ul li a {
+	display: block;
 	color: #fff;
 	background-color: #006666;
 	border: #004444 solid 2px;
 	border-radius: 5px;
 	padding: 5px;
-	display: grid;
+
+	transition: all 0.2 ease-in;
 }
-#menu:hover > ul {
-	display: grid;
-}
-#menu ul {
-	display: none;
-	position: relative;
-}
-#menu ul ul li {
-	float: none;
-	position: relative;
-}
-#menu li:hover > ul {
-	display: grid;
-	position: absolute;
-	left: 100%;
-	top: 0%;
+.menu > ul li > a i.fa {
+	text-transform: uppercase;
+	font-style: normal;
+	/* position: absolute; */
+	/* width: 300px; */
 }
 
+.menu li a:hover {
+	background-color: #f6fdff;
+	color: #000;
+	text-decoration: none;
+
+	transition: all 0.4 ease-out;
+}
 /* ! Ссылки */
 a {
 	color: #004444;
