@@ -144,9 +144,15 @@ footer {
 .menu > ul {
 	display: flex;
 	justify-content: center;
+	display: none;
 }
 .menu > ul li {
 	position: relative;
+	/* position: absolute; */
+	top: 100%;
+}
+.menu:hover > ul {
+	display: flex;
 }
 .menu > ul li a {
 	display: block;
