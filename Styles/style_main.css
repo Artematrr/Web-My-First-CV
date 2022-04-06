@@ -128,8 +128,8 @@ footer {
 	text-align: center;
 	margin-top: 10px;
 	margin-inline: 10px;
-	padding-block: 5px;
-	padding-inline: 10px;
+	padding-block: 2px;
+
 	position: sticky;
 	top: 3px;
 }
@@ -142,17 +142,16 @@ footer {
 	list-style: none;
 }
 .menu > ul {
-	display: flex;
-	justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	/* justify-items: center; */
+	position: absolute;
+	top: 100%;
+	width: 100%;
 	display: none;
 }
-.menu > ul li {
-	position: relative;
-	/* position: absolute; */
-	top: 100%;
-}
 .menu:hover > ul {
-	display: flex;
+	display: grid;
 }
 .menu > ul li a {
 	display: block;
@@ -166,31 +165,27 @@ footer {
 .menu .fa {
 	text-transform: uppercase;
 	font-style: normal;
-	max-width: max-content;
 }
 .menu li a:hover {
 	background-color: #f6fdff;
 	color: #000;
 	text-decoration: none;
-	transition: all 0.2 ease-out;
 }
+
 /* Подрункты меню */
 .menu li ul {
-	margin: auto;
-	width: 90%;
+	display: grid;
+	justify-content: center;
+	left: 0;
 	display: none;
 }
 .menu li:hover > ul {
-	display: block;
-	position: absolute;
+	display: grid;
+}
+/* .menu li > ul li ul {
 	position: relative;
-}
-.menu li > ul li ul {
-	position: absolute;
-	/* position: relative; */
-	/* left: 10%; */
-	/* top: 0%; */
-}
+	top: 0%;
+} */
 
 /* ! Ссылки */
 a {
