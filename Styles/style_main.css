@@ -123,31 +123,28 @@ footer {
 	color: #f6fdff;
 }
 
+.menu * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
 .menu {
 	font-weight: bold;
 	text-align: center;
 	margin-top: 10px;
 	margin-inline: 10px;
 	padding-block: 2px;
-
 	position: sticky;
 	top: 3px;
 }
-.menu * {
-	margin: 0;
-	padding: 0;
-}
-.menu ul,
-.menu ol {
-	list-style: none;
-}
 .menu > ul {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	/* justify-items: center; */
+	grid-template-columns: repeat(3, auto);
 	position: absolute;
 	top: 100%;
 	width: 100%;
+	justify-content: center;
+	column-gap: 10px;
 	display: none;
 }
 .menu:hover > ul {
@@ -162,21 +159,25 @@ footer {
 	padding: 5px;
 	text-transform: none;
 }
+.menu > ul li a:active {
+	color: #505050;
+}
 .menu .fa {
 	text-transform: uppercase;
-	font-style: normal;
+}
+.menu .fa:hover {
+	cursor: default;
 }
 .menu li a:hover {
 	background-color: #f6fdff;
 	color: #000;
 	text-decoration: none;
+	cursor: pointer;
 }
-
 /* Подрункты меню */
 .menu li ul {
 	display: grid;
 	justify-content: center;
-	left: 0;
 	display: none;
 }
 .menu li:hover > ul {
@@ -194,9 +195,6 @@ a {
 }
 a:hover {
 	text-decoration: underline;
-}
-a:active {
-	font-weight: bold;
 }
 
 /* ! Тени относительно вертикали */
