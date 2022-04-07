@@ -123,10 +123,12 @@ footer {
 	color: #f6fdff;
 }
 
+/* ! Менюшка */
 .menu * {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	transition: all 0.1s ease-in-out;
 }
 .menu {
 	font-weight: bold;
@@ -160,7 +162,8 @@ footer {
 	text-transform: none;
 }
 .menu > ul li a:active {
-	color: #505050;
+	color: #004444;
+	background-color: #fff;
 }
 .menu .fa {
 	text-transform: uppercase;
@@ -170,11 +173,13 @@ footer {
 }
 .menu li a:hover {
 	background-color: #f6fdff;
-	color: #000;
+	color: #006666;
 	text-decoration: none;
 	cursor: pointer;
 }
+
 /* Подрункты меню */
+
 .menu li ul {
 	display: grid;
 	justify-content: center;
@@ -183,10 +188,6 @@ footer {
 .menu li:hover > ul {
 	display: grid;
 }
-/* .menu li > ul li ul {
-	position: relative;
-	top: 0%;
-} */
 
 /* ! Ссылки */
 a {
@@ -390,9 +391,6 @@ a:hover {
 	border: 2px solid #004444;
 	transition: all 0.1s ease-in;
 }
-.services-btn:active {
-	transform: translateY(3px);
-}
 .services-btn:hover {
 	margin-left: 30px;
 }
@@ -406,6 +404,10 @@ a:hover {
 	background: #f6fdff;
 	border: 2px solid #004444;
 	transition: all 0.2s ease-out;
+}
+.services a:active {
+	color: #004444;
+	margin-left: 40px;
 }
 
 /* ! Зона связей */
@@ -482,7 +484,7 @@ a:hover {
 	transform: translateY(3px);
 }
 
-/* ! Для узких экранов*/
+/* Небольшой переход*/
 @media (max-width: 700px) {
 	.svcard {
 		display: grid;
@@ -490,7 +492,7 @@ a:hover {
 		box-shadow: 0px 10px 14px rgba(0, 0, 0, 0.25);
 	}
 }
-
+/* ! Для узких экранов*/
 @media (max-width: 600px) {
 	header {
 		display: grid;
@@ -503,6 +505,69 @@ a:hover {
 		width: 200px;
 		padding-block: 10px;
 	}
+
+	/* .menu * {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		transition: all 0.1s ease-in-out;
+	}
+	.menu {
+		font-weight: bold;
+		text-align: center;
+		margin-top: 10px;
+		margin-inline: 10px;
+		padding-block: 2px;
+		position: sticky;
+		top: 3px;
+	}
+	.menu > ul {
+		display: grid;
+		grid-template-columns: repeat(3, auto);
+		position: absolute;
+		top: 100%;
+		width: 100%;
+		justify-content: center;
+		column-gap: 10px;
+		display: none;
+	}
+	.menu:hover > ul {
+		display: grid;
+	}
+	.menu > ul li a {
+		display: block;
+		color: #fff;
+		background-color: #006666;
+		border: #004444 solid 2px;
+		border-radius: 5px;
+		padding: 5px;
+		text-transform: none;
+	}
+	.menu > ul li a:active {
+		color: #004444;
+		background-color: #fff;
+	}
+	.menu .fa {
+		text-transform: uppercase;
+	}
+	.menu .fa:hover {
+		cursor: default;
+	}
+	.menu li a:hover {
+		background-color: #f6fdff;
+		color: #006666;
+		text-decoration: none;
+		cursor: pointer;
+	}
+	.menu li ul {
+		display: grid;
+		justify-content: center;
+		display: none;
+	}
+	.menu li:hover > ul {
+		display: grid;
+	} */
+
 	.avatar {
 		margin-bottom: 0px;
 	}
