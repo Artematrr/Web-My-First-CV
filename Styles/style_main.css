@@ -8,6 +8,7 @@ body {
 	font-family: 'Raleway', sans-serif;
 	color: #000;
 	margin: 0px;
+	min-width: min-content;
 	background-image: url(/Images/wave-seamless_pattern-1.jpg);
 	background-size: auto;
 }
