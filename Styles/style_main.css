@@ -23,7 +23,21 @@ div {
 	border-bottom: 10px dotted #004444;
 	border-bottom-width: 5px;
 }
+.noselect {
+	user-select: none; /* Non-prefixed version, supported by Chrome and Opera */
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+}
 
+body::selection,
+body::-moz-selection,
+body::-webkit-selection {
+	background: #accad3;
+	color: #fff;
+}
 /* ! Кастомный скролбар */
 ::-webkit-scrollbar {
 	width: 10px;
