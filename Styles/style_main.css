@@ -31,11 +31,11 @@ div {
 	-moz-user-select: none; /* Firefox */
 	-ms-user-select: none; /* Internet Explorer/Edge */
 }
-
-body::selection,
-body::-moz-selection,
-body::-webkit-selection {
-	background: #accad3;
+/* transform: rotateY(90deg); */
+.container::selection,
+.container::-moz-selection,
+.container::-webkit-selection {
+	background: #000;
 	color: #fff;
 }
 /* ! Кастомный скролбар */
@@ -192,9 +192,7 @@ footer {
 	text-decoration: none;
 	cursor: pointer;
 }
-
 /* Подрункты меню */
-
 .menu li ul {
 	display: grid;
 	justify-content: center;
@@ -245,13 +243,16 @@ a:hover {
 /* ! Оглавление */
 .contents {
 	box-sizing: border-box;
-	padding: 0px 10px;
+	padding: 0px 20px;
 	margin: 10px 10px 20px 10px;
-	width: 400px;
+	width: fit-content;
 	float: left;
 }
 .contents a {
 	color: #004444;
+}
+.contents a:active {
+	color: #000;
 }
 .contents li {
 	color: #505050;
@@ -337,6 +338,10 @@ a:hover {
 .list-group-item:hover {
 	padding-left: 50px;
 }
+.list-group-item:active {
+	padding-left: 70px;
+}
+
 .list-group-item:first-child {
 	border-top-right-radius: 8px;
 	border-top-left-radius: 8px;
@@ -357,22 +362,24 @@ a:hover {
 
 /* ! Мои услуги */
 .svcards {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 	column-gap: 20px;
-	justify-content: center;
 }
 .svcard {
 	background: #004444;
 	align-self: flex-start;
 	border: 3px solid #004444;
 	width: 300px;
-	min-width: min-content;
 	margin-bottom: 20px;
-	transition: all 0.1s ease-in;
+	transition: all 0.08s ease-in;
 }
 .svcard:hover {
-	row-gap: 0px;
+	/* border-bottom-right-radius: 10px; */
+	border-bottom-width: 6px;
+	border-right-width: 6px;
+	border-top-width: 0px;
+	border-left-width: 0px;
 }
 /* todo Отфиксить бы неполное заполение */
 .svcard-img-top {
@@ -386,9 +393,7 @@ a:hover {
 }
 .svcard-body {
 	background: #f6fdff;
-	border-top-width: 3px;
-	border-top-style: solid;
-	border-top-color: inherit;
+	border: 3px solid inherit;
 	padding-bottom: 20px;
 }
 .svcard-text {
@@ -499,14 +504,6 @@ a:hover {
 	transform: translateY(3px);
 }
 
-/* Небольшой переход*/
-@media (max-width: 700px) {
-	.svcard {
-		display: grid;
-		width: 259px;
-		box-shadow: 0px 10px 14px rgba(0, 0, 0, 0.25);
-	}
-}
 /* ! Для узких экранов*/
 @media (max-width: 600px) {
 	header {
@@ -599,9 +596,12 @@ a:hover {
 	.container {
 		padding: 0px 10px;
 	}
+	.svcards {
+		/* display: flex; */
+		/* flex-wrap: nowrap; */
+	}
 	.svcard {
-		display: grid;
-		width: 400px;
-		box-shadow: 0px 10px 14px rgba(0, 0, 0, 0.25);
+		/* margin-inline-end: 10px; */
+		/* margin-left: 10px; */
 	}
 }
