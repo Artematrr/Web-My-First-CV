@@ -1,18 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
-/* @import 'flexboxgrid2/flexboxgrid2.css'; */
 
 /* ! Основа структуры */
 body {
+	display: block;
 	font-size: 16px;
 	font-style: normal;
 	font-family: 'Raleway', sans-serif;
 	color: #000;
 	margin: 0px;
-	width: 100%;
+	padding: 0px;
 	height: 100vh;
-	min-width: min-content;
 	background-image: url(/Images/wave-seamless_pattern-1.jpg);
-	background-size: auto;
+	background-size: cover;
 }
 div {
 	width: 100%;
@@ -26,20 +25,24 @@ div {
 	border-bottom-width: 5px;
 }
 .noselect {
-	user-select: none; /* Non-prefixed version, supported by Chrome and Opera */
+	user-select: none; /* Chrome and Opera */
 	-webkit-touch-callout: none; /* iOS Safari */
 	-webkit-user-select: none; /* Safari */
-	-khtml-user-select: none; /* Konqueror HTML */
+	-khtml-user-select: none; /* Konqueror*/
 	-moz-user-select: none; /* Firefox */
 	-ms-user-select: none; /* Internet Explorer/Edge */
 }
+
 /* ! Красивое выделение */
-/* .container::selection,
-.container::-moz-selection,
-.container::-webkit-selection {
-	background: #000;
+::-moz-selection {
 	color: #fff;
-} */
+	background: #009090;
+}
+::selection {
+	color: #fff;
+	background: #009090;
+}
+
 /* ! Кастомный скролбар */
 ::-webkit-scrollbar {
 	width: 10px;
@@ -372,20 +375,24 @@ a:hover {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 	justify-items: center;
+	/* min-width: fit-content; */
+	max-width: 100%;
 }
 .svcard {
 	background: #004444;
-	align-self: flex-start;
+	align-self: center;
+	/* align-self: flex-start; */
 	border: 3px solid #004444;
 	width: 300px;
 	margin-bottom: 20px;
 	transition: all 0.08s ease-in;
 }
 .svcard:hover {
-	border-bottom-width: 6px;
-	border-right-width: 6px;
-	border-top-width: 0px;
-	border-left-width: 0px;
+	box-shadow: none;
+	/* border-top-width: 10px; */
+	/* border-right-width: 1px; */
+	/* border-bottom-width: 10px; */
+	/* border-left-width: 1px; */
 }
 .svcard-img-top {
 	border-top-left-radius: inherit;
@@ -512,30 +519,17 @@ a:hover {
 
 /* ! Для узких экранов*/
 @media (max-width: 700px) {
+	.svcards {
+		/* grid-gap: 20px; */
+		grid-auto-flow: column;
+		scroll-snap-type: x proximity;
+	}
 	.svcard {
-		/* width: 350px; */
+		scroll-snap-align: center;
 		min-width: 300px;
 		margin-inline: 10px;
 	}
-	.svcards {
-		/* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
-		display: flex;
-		flex-wrap: nowrap;
-		overflow-x: scroll;
-	}
-	/*
-	.services {
-		white-space: nowrap;
-	}
-	.svcards {
-		display: inline-block;
-		/* min-width: 300px; */
-	/* margin-inline: 10px; 
-	}
-} 
-*/
 }
-
 @media (max-width: 600px) {
 	header {
 		display: grid;
@@ -626,8 +620,5 @@ a:hover {
 	}
 	.container {
 		padding: 0px 10px;
-	}
-	.svcard {
-		/* width: 400px; */
 	}
 }
