@@ -113,39 +113,25 @@ figcaption {
 	font-style: oblique;
 }
 /* ! ТЕСТ */
-.app {
+.scroll {
 	display: grid;
-	align-content: start;
-}
-.app > .full {
-	grid-column: 1 / -1;
-}
-.hs {
-	display: grid;
+	background: rgba(171, 141, 255, 0.25);
 	grid-gap: 10px;
-	grid-template-columns: 10px;
-	grid-template-rows: minmax(150px, 1fr);
+	grid-template-rows: minmax(100px, auto-fill);
 	grid-auto-flow: column;
 	grid-auto-columns: 200px;
 	overflow-x: scroll;
+	padding-block: 10px;
 	scroll-snap-type: x proximity;
-	padding-bottom: 10px;
 }
-.hs:before,
-.hs:after {
+.scroll:before,
+.scroll:after {
 	content: '';
-	width: 10px;
 }
-.app {
-	background: rgba(0, 0, 0, 0.25);
-}
-
-.hs > li,
-.item {
+.scroll-card {
 	scroll-snap-align: center;
-	display: flex;
+	display: grid;
 	justify-content: center;
 	align-items: center;
 	background: #fff;
-	border-radius: 8px;
 }
