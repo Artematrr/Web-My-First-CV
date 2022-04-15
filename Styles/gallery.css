@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 
 body {
-	background-color: rgb(236, 231, 234);
+	background-image: url('/Images/white-seamless-weave-pattern-background-1.jpg');
 	font-family: 'Raleway', Arial, sans-serif;
 	margin: 0;
-	padding: 10px;
+	padding-inline: 10px;
+	display: grid;
 }
 /*
 footer,
@@ -80,21 +81,24 @@ footer ul {
 }
 .outer-grid > div {
 	font-size: 1.5em;
-	padding: 10px;
-	background: rgba(159, 134, 134, 0.5);
+	padding: 8px;
+	background: rgba(0, 0, 0, 0.25);
 	text-align: center;
 	align-self: flex-start;
 	border: 5px solid;
 	border-radius: 20px;
 }
 .inner-grid > div {
-	background: rgb(32, 36, 60);
+	background: #fff;
+	border: 2px dashed #000;
 	border-radius: 10px;
 	padding: 5px;
 	columns: 50%;
 }
 .inner-grid-img {
 	display: grid;
+	gap: 5px;
+	align-items: center;
 	grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -107,4 +111,41 @@ img {
 }
 figcaption {
 	font-style: oblique;
+}
+/* ! ТЕСТ */
+.app {
+	display: grid;
+	align-content: start;
+}
+.app > .full {
+	grid-column: 1 / -1;
+}
+.hs {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: 10px;
+	grid-template-rows: minmax(150px, 1fr);
+	grid-auto-flow: column;
+	grid-auto-columns: 200px;
+	overflow-x: scroll;
+	scroll-snap-type: x proximity;
+	padding-bottom: 10px;
+}
+.hs:before,
+.hs:after {
+	content: '';
+	width: 10px;
+}
+.app {
+	background: rgba(0, 0, 0, 0.25);
+}
+
+.hs > li,
+.item {
+	scroll-snap-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #fff;
+	border-radius: 8px;
 }

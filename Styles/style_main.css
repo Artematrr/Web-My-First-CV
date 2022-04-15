@@ -8,6 +8,8 @@ body {
 	font-family: 'Raleway', sans-serif;
 	color: #000;
 	margin: 0px;
+	width: 100%;
+	height: 100vh;
 	min-width: min-content;
 	background-image: url(/Images/wave-seamless_pattern-1.jpg);
 	background-size: auto;
@@ -31,16 +33,17 @@ div {
 	-moz-user-select: none; /* Firefox */
 	-ms-user-select: none; /* Internet Explorer/Edge */
 }
-/* transform: rotateY(90deg); */
-.container::selection,
+/* ! Красивое выделение */
+/* .container::selection,
 .container::-moz-selection,
 .container::-webkit-selection {
 	background: #000;
 	color: #fff;
-}
+} */
 /* ! Кастомный скролбар */
 ::-webkit-scrollbar {
 	width: 10px;
+	height: 10px;
 }
 ::-webkit-scrollbar-track {
 	background: #f6fdff;
@@ -265,6 +268,10 @@ a:hover {
 	width: 200px;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	transition: all 0.3s ease-in-out;
+}
+.avatar:active {
+	transform: rotateY(180deg);
 }
 .my-city > p > .image {
 	float: right;
@@ -363,8 +370,8 @@ a:hover {
 /* ! Мои услуги */
 .svcards {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	column-gap: 20px;
+	grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+	justify-items: center;
 }
 .svcard {
 	background: #004444;
@@ -375,13 +382,11 @@ a:hover {
 	transition: all 0.08s ease-in;
 }
 .svcard:hover {
-	/* border-bottom-right-radius: 10px; */
 	border-bottom-width: 6px;
 	border-right-width: 6px;
 	border-top-width: 0px;
 	border-left-width: 0px;
 }
-/* todo Отфиксить бы неполное заполение */
 .svcard-img-top {
 	border-top-left-radius: inherit;
 	border-top-right-radius: inherit;
@@ -393,7 +398,8 @@ a:hover {
 }
 .svcard-body {
 	background: #f6fdff;
-	border: 3px solid inherit;
+	border-bottom-left-radius: inherit;
+	border-bottom-right-radius: inherit;
 	padding-bottom: 20px;
 }
 .svcard-text {
@@ -505,6 +511,31 @@ a:hover {
 }
 
 /* ! Для узких экранов*/
+@media (max-width: 700px) {
+	.svcard {
+		/* width: 350px; */
+		min-width: 300px;
+		margin-inline: 10px;
+	}
+	.svcards {
+		/* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+		display: flex;
+		flex-wrap: nowrap;
+		overflow-x: scroll;
+	}
+	/*
+	.services {
+		white-space: nowrap;
+	}
+	.svcards {
+		display: inline-block;
+		/* min-width: 300px; */
+	/* margin-inline: 10px; 
+	}
+} 
+*/
+}
+
 @media (max-width: 600px) {
 	header {
 		display: grid;
@@ -596,12 +627,7 @@ a:hover {
 	.container {
 		padding: 0px 10px;
 	}
-	.svcards {
-		/* display: flex; */
-		/* flex-wrap: nowrap; */
-	}
 	.svcard {
-		/* margin-inline-end: 10px; */
-		/* margin-left: 10px; */
+		/* width: 400px; */
 	}
 }
