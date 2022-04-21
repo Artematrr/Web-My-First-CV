@@ -268,6 +268,7 @@ a:hover {
 .image {
   width: 300px;
 }
+
 .avatar {
   width: 200px;
   margin-top: 20px;
@@ -387,7 +388,9 @@ a:hover {
   transition: all 0.08s ease-in;
 }
 .svcard:hover {
-  box-shadow: none;
+  border-color: #009090;
+  box-shadow: 0px 0px 20px rgba(0, 90, 90, 0.5);
+
   /* border-top-width: 10px; */
   /* border-right-width: 1px; */
   /* border-bottom-width: 10px; */
@@ -522,11 +525,22 @@ a:hover {
     grid-gap: 30px;
     grid-auto-flow: column;
     scroll-snap-type: x proximity;
-    max-width: calc(40vw + 250px);
+    /* max-width: calc(40vw + 250px); */
+    max-width: 90vw;
     margin-inline: auto;
   }
   .svcard {
     scroll-snap-align: center;
+  }
+  .svcards::before {
+    font-style: oblique;
+    color: #009090;
+    content: 'Карточки справа';
+    align-self: center;
+  }
+  .svcards::after {
+    content: '';
+    min-width: 120px;
   }
 }
 @media (max-width: 600px) {
