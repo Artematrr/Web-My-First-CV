@@ -524,7 +524,7 @@ a:hover {
     grid-auto-columns: 300px;
     scroll-snap-type: x proximity;
     min-width: 400px;
-    max-width: calc(100vw - 30px);
+    max-width: calc(100vw - 50px);
     /* max-width: calc(50vw + 300px); */
     margin-inline: auto;
     padding-block: 20px;
@@ -540,6 +540,7 @@ a:hover {
     color: #009090;
   }
   .svcards::before {
+    /* min-width: 100px; */
     max-width: 80px;
     margin-right: 50px;
     content: 'Карточки справа';
