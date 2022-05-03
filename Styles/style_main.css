@@ -229,6 +229,36 @@ a:hover {
   box-shadow: 0px 10px 14px rgba(0, 0, 0, 0.25);
 }
 
+/* ! Бегушая строка */
+.marquee-text {
+  white-space: nowrap;
+  margin-inline: auto;
+  background-color: #f6fdff;
+  color: #004444;
+  border: 5px double #004444;
+  border-radius: 10px;
+  max-width: calc(100px + 50vw);
+  overflow: hidden;
+}
+.marquee-text:hover p {
+  animation-play-state: paused;
+}
+.marquee-text > p {
+  animation: marquee-text 3s ease-in-out infinite;
+  font-size: 30px;
+  margin-block: 10px;
+  margin-inline: calc(10px - 30vw);
+}
+
+@keyframes marquee-text {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 /* ! Верхняя информация */
 .info {
   display: flex;
@@ -524,7 +554,7 @@ a:hover {
     grid-auto-columns: 300px;
     scroll-snap-type: x proximity;
     min-width: 400px;
-    max-width: calc(100vw - 50px);
+    /* max-width: calc(100vw - 50px); */
     /* max-width: calc(50vw + 300px); */
     margin-inline: auto;
     padding-block: 20px;
@@ -563,69 +593,6 @@ a:hover {
     width: 200px;
     padding-block: 10px;
   }
-
-  /* .menu * {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-		transition: all 0.1s ease-in-out;
-	}
-	.menu {
-		font-weight: bold;
-		text-align: center;
-		margin-top: 10px;
-		margin-inline: 10px;
-		padding-block: 2px;
-		position: sticky;
-		top: 3px;
-	}
-	.menu > ul {
-		display: grid;
-		grid-template-columns: repeat(3, auto);
-		position: absolute;
-		top: 100%;
-		width: 100%;
-		justify-content: center;
-		column-gap: 10px;
-		display: none;
-	}
-	.menu:hover > ul {
-		display: grid;
-	}
-	.menu > ul li a {
-		display: block;
-		color: #fff;
-		background-color: #006666;
-		border: #004444 solid 2px;
-		border-radius: 5px;
-		padding: 5px;
-		text-transform: none;
-	}
-	.menu > ul li a:active {
-		color: #004444;
-		background-color: #fff;
-	}
-	.menu .fa {
-		text-transform: uppercase;
-	}
-	.menu .fa:hover {
-		cursor: default;
-	}
-	.menu li a:hover {
-		background-color: #f6fdff;
-		color: #006666;
-		text-decoration: none;
-		cursor: pointer;
-	}
-	.menu li ul {
-		display: grid;
-		justify-content: center;
-		display: none;
-	}
-	.menu li:hover > ul {
-		display: grid;
-	} */
-
   .avatar {
     margin-bottom: 0px;
   }
