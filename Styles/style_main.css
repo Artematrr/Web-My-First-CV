@@ -541,28 +541,30 @@ a:hover {
   padding-bottom: 10px;
   transform: translateY(-3px);
 }
+.contact-btn-link:hover {
+  text-decoration: none;
+}
 .contact-btn:active {
   font-weight: bold;
   transform: translateY(3px);
 }
 
 /* ! Для узких экранов*/
-@media (max-width: 700px) {
+@media (max-width: 680px) {
   .svcards {
-    grid-gap: 30px;
-    grid-auto-flow: column;
-    grid-auto-columns: 300px;
-    scroll-snap-type: x proximity;
-    min-width: 400px;
+    /* grid-gap: 30px; */
+    /* grid-auto-flow: column; */
+    /* grid-auto-columns: 300px; */
+    /* scroll-snap-type: x proximity; */
     /* max-width: calc(100vw - 50px); */
-    /* max-width: calc(50vw + 300px); */
     margin-inline: auto;
-    padding-block: 20px;
+    /* padding-block: 20px; */
   }
   .svcard {
+    width: calc(100vw - 100px);
     scroll-snap-align: center;
   }
-  .svcards::before,
+  /* .svcards::before,
   .svcards::after {
     text-align: center;
     font-style: oblique;
@@ -570,16 +572,16 @@ a:hover {
     color: #009090;
   }
   .svcards::before {
-    /* min-width: 100px; */
+    min-width: 100px;
     max-width: 80px;
-    margin-right: 50px;
+    margin-right: 500px;
     content: 'Карточки справа';
   }
   .svcards::after {
     max-width: 60px;
     margin-left: 50px;
     content: 'Карточки слева';
-  }
+  } */
 }
 @media (max-width: 600px) {
   header {
