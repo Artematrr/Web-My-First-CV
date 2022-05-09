@@ -6,11 +6,12 @@ body {
   font-size: 16px;
   font-style: normal;
   font-family: 'Raleway', sans-serif;
+  overflow: auto;
   color: #000;
   margin: 0px;
   padding: 0px;
-  min-width: fit-content;
   height: 100vh;
+  min-width: 100vw;
   background-image: url(/Images/wave-seamless_pattern-1.jpg);
   background-size: cover;
 }
@@ -158,7 +159,7 @@ footer {
   margin-top: 10px;
   margin-inline: 10px;
   padding-block: 2px;
-  position: sticky;
+  position: relative;
   top: 3px;
 }
 .menu > ul {
@@ -230,32 +231,30 @@ a:hover {
 }
 
 /* ! Бегушая строка */
-.marquee-text {
-  white-space: nowrap;
+.marquee-infinite {
+  height: 200px;
   margin-inline: auto;
-  background-color: #f6fdff;
-  color: #004444;
-  border: 5px double #004444;
+  border: 5px double #000;
   border-radius: 10px;
-  max-width: calc(100px + 50vw);
   overflow: hidden;
+  max-width: 90%;
 }
-.marquee-text:hover p {
-  animation-play-state: paused;
+.marquee-infinite div {
+  display: flex;
+  height: 100%;
+  width: max-content;
+  animation: marquee-infinite 4s linear infinite;
 }
-.marquee-text > p {
-  animation: marquee-text 3s ease-in-out infinite;
-  font-size: 30px;
-  margin-block: 10px;
-  margin-inline: calc(10px - 30vw);
+.marquee-infinite span {
+  display: flex;
 }
 
-@keyframes marquee-text {
+@keyframes marquee-infinite {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
@@ -294,9 +293,14 @@ a:hover {
 .contents li {
   color: #505050;
 }
+
 /* ! Картиночки */
 .image {
   width: 300px;
+}
+.mother {
+  margin: 20px 10px 10px 20px;
+  float: right;
 }
 
 .avatar {
