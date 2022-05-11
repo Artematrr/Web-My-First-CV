@@ -16,12 +16,18 @@ body {
   margin: 0;
   overflow-x: hidden;
   background-image: url('/Images/abstract-bw-seamless-pattern-2.jpg');
-  color: rgb(212, 222, 255);
+  color: rgb(233, 238, 255);
+}
+p {
+  text-align: center;
 }
 a {
   text-decoration: none;
   font-style: oblique;
   color: rgb(230, 243, 255);
+}
+a:hover {
+  text-decoration: underline;
 }
 a:active {
   color: rgb(255, 230, 232);
@@ -83,40 +89,11 @@ div {
   text-align: center;
 }
 
-/* ! Бегушая строка */
-.marquee-infinite {
-  height: 200px;
-  margin-inline: auto;
-  border: 5px double #000;
-  border-radius: 10px;
-  overflow: hidden;
-  max-width: 90%;
-}
-.marquee-infinite div {
-  display: flex;
-  height: 100%;
-  width: max-content;
-  animation: marquee-infinite 4s linear infinite;
-}
-.marquee-infinite span {
-  display: flex;
-}
-
-@keyframes marquee-infinite {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
 .marquee-text {
   margin-inline: auto;
   background-color: rgba(60, 64, 73, 0);
-  color: #fff;
-  border: 5px double #000;
-  border-radius: 10px;
+  color: rgb(212, 222, 255);
+  border: 2px solid #fff;
   max-width: 90%;
   overflow: hidden;
 }
