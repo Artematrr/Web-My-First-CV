@@ -10,11 +10,21 @@ body {
     'header header 	header' 60px
     'nav    article ads' 1fr
     'footer	footer  footer' auto
-    / 200px 1fr 180px;
+    / 300px 1fr 180px;
   grid-gap: 10px;
   height: 100vh;
   margin: 0;
   overflow-x: hidden;
+  background-image: url('/Images/abstract-bw-seamless-pattern-2.jpg');
+  color: rgb(212, 222, 255);
+}
+a {
+  text-decoration: none;
+  font-style: oblique;
+  color: rgb(230, 243, 255);
+}
+a:active {
+  color: rgb(255, 230, 232);
 }
 header,
 footer,
@@ -22,7 +32,7 @@ article,
 nav,
 div {
   padding: 20px;
-  background: rgb(153, 182, 225);
+  background: rgba(60, 64, 73, 0.99);
 }
 #pageHeader {
   grid-area: header;
@@ -32,6 +42,12 @@ div {
 
 #mainArticle {
   grid-area: article;
+}
+#mainArticle img {
+  height: 500px;
+}
+#mainArticle img {
+  height: 400px;
 }
 
 #pageHeader > h1 {
@@ -43,12 +59,23 @@ div {
 #mainNav {
   grid-area: nav;
 }
+#mainNav li {
+  margin-top: 10px;
+}
+#mainNav div {
+  position: fixed;
+  top: 50px;
+  left: 10px;
+  background: rgba(60, 64, 73, 0);
+}
 
 #siteAds {
   grid-area: ads;
 }
 #siteAds > img {
   width: fit-content;
+  margin: 0;
+  padding: 0;
 }
 
 #pageFooter {
