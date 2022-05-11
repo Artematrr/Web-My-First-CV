@@ -410,13 +410,12 @@ a:hover {
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   justify-items: center;
   justify-content: center;
-  padding-top: 20px;
+  /* padding-top: 20px; */
   max-width: 100%;
 }
 .svcard {
   background: #004444;
   align-self: center;
-
   border: 3px solid #004444;
   width: 300px;
   margin-bottom: 20px;

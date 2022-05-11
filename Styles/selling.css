@@ -5,16 +5,16 @@
 
 body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
   display: grid;
   grid-template:
     'header header 	header' 60px
     'nav    article ads' 1fr
-    'footer	footer  footer' 60px
-    / 20% 1fr min-content;
+    'footer	footer  footer' auto
+    / 200px 1fr 180px;
   grid-gap: 10px;
   height: 100vh;
   margin: 0;
+  overflow-x: hidden;
 }
 header,
 footer,
@@ -22,35 +22,35 @@ article,
 nav,
 div {
   padding: 20px;
-  background: rgb(241, 219, 255);
+  background: rgb(153, 182, 225);
 }
 #pageHeader {
   grid-area: header;
-  /* display: flex; */
-
   text-align: center;
-  /* justify-content: center; */
   padding: 10px;
 }
 
 #mainArticle {
   grid-area: article;
 }
+
 #pageHeader > h1 {
   align-self: center;
-
   font-size: 30px;
   margin: 0px;
 }
 
 #mainNav {
-  /* width: 100%; */
   grid-area: nav;
 }
 
 #siteAds {
   grid-area: ads;
 }
+#siteAds > img {
+  width: fit-content;
+}
+
 #pageFooter {
   grid-area: footer;
   text-align: center;

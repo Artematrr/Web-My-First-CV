@@ -23,7 +23,8 @@
         </div>
       </div>
     </header>
-    <nav class="noselect shadc card bg-dark menu">
+
+    <nav hidden class="noselect shadc card bg-dark menu">
       <p class="">Быстрое перемещение и лёгкий доступ</p>
       <ul>
         <li>
@@ -85,27 +86,6 @@
         </div>
       </div>
 
-      <div style="padding: 0; text-align: center" class="separation">
-        <h2 style="padding-top: 0">Завод по производству чубриков</h2>
-        <div class="marquee-infinite">
-          <div>
-            <span>
-              <img src="Images/@man.jpg" alt="Чeл" />
-              <img src="Images/@man.jpg" alt="Чeл" />
-              <img src="Images/@man.jpg" alt="Чeл" />
-              <img src="Images/@man.jpg" alt="Чeл" />
-            </span>
-            <span>
-              <img src="Images/@man.jpg" alt="Чeл" />
-              <img src="Images/@man.jpg" alt="Чeл" />
-              <img src="Images/@man.jpg" alt="Чeл" />
-              <img src="Images/@man.jpg" alt="Чeл" />
-            </span>
-          </div>
-        </div>
-        <p></p>
-      </div>
-
       <div class="separation">
         <nav class="contents bg-light card shadr">
           <h2>Структура страницы:</h2>
@@ -121,6 +101,7 @@
               </ul>
             </li>
             <li><a href="#more-links">Сайты, которые создал автор</a></li>
+            <li><a href="#marquee-infinite">Залипалка для глаз</a></li>
             <li><a href="#services">Услуги вашего покорного</a></li>
             <li><a href="#contact">Как связаться с автором</a></li>
           </ol>
@@ -137,7 +118,7 @@
           />
           <figcaption>Памятник «Родина-мать»</figcaption>
         </figure>
-        <h3>Про мой родной город</h3>
+        <h3>Про мой родной город:</h3>
         <p>
           Я родился и вырос в
           <a
@@ -175,7 +156,7 @@
       </div>
 
       <div id="food-list" class="food-list separation">
-        <h3><q>Я люблю готовить</q></h3>
+        <h3><q>Я люблю готовить</q>:</h3>
         <dl>
           <ul>
             <li class="list">
@@ -217,7 +198,7 @@
       </div>
 
       <div id="more-links" class="noselect more-links separation">
-        <h3>Разные мною созданные странички</h3>
+        <h3>Разные мною созданные странички:</h3>
         <ul class="shadr list-group bg-light">
           <li class="list-group-item">
             <a target="_blank" href="Pages/index_2.html">Чужой сайт</a>
@@ -242,6 +223,27 @@
             >
           </li>
         </ul>
+      </div>
+
+      <div class="separation">
+        <h3 id="marquee-infinite">Завод по производству чубриков:</h3>
+        <div class="marquee-infinite">
+          <div>
+            <span>
+              <img src="Images/@man.jpg" alt="Чeл" />
+              <img src="Images/@man.jpg" alt="Чeл" />
+              <img src="Images/@man.jpg" alt="Чeл" />
+              <img src="Images/@man.jpg" alt="Чeл" />
+            </span>
+            <span>
+              <img src="Images/@man.jpg" alt="Чeл" />
+              <img src="Images/@man.jpg" alt="Чeл" />
+              <img src="Images/@man.jpg" alt="Чeл" />
+              <img src="Images/@man.jpg" alt="Чeл" />
+            </span>
+          </div>
+        </div>
+        <p></p>
       </div>
 
       <div id="services" class="services separation">
@@ -337,13 +339,4 @@
       <p>Вот и дно, ребятки.</p>
     </footer>
   </body>
-
-  <!-- TODO чтоб работало -->
-  <!-- <script>
-		let body = document.documentElement
-		fontup.onclick = function () {
-			body.style.fontSize =
-				parseInt(getComputedStyle(body, '').fontSize) + 2 + 'px'
-		}
-	</script> -->
 </html>
